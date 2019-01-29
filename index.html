@@ -27,7 +27,7 @@
       </ul>
       <nav class="mainNav">
         <ul>
-          <li><a href="#">Главная</a></li>
+          <li><a href="">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
@@ -39,22 +39,23 @@
     </header>
     <main>
       <section class="ourOffers">
+        <h2 class="visually-hidden">Наши предложения</h2>
         <ul class="ourOffersWhatWeSell">
           <li>
             <div class="ourOffersMaterials new">
-              <h3>Материалы</h3>
+              <p>Материалы</p>
               <a href="#" class="button">На любой вкус</a>
             </div>
           </li>
           <li>
             <div  class="ourOffersTools">
-              <h3>Инструмент</h3>
+              <p>Инструмент</p>
               <a href="#" class="button">На все случаи</a>
             </div>
           </li>
           <li>
             <div  class="ourOffersTechnique">
-              <h3>Техника</h3>
+              <p>Техника</p>
               <a href="#" class="button">Для стройки</a>
             </div>
           </li>
@@ -63,79 +64,90 @@
           <button type="button" name="OffersSliderBtnLeft" class="sliderLeft">&lt;</button>
           <button type="button" name="OffersSliderBtnRight" class="sliderRight">&gt;</button>
           <div class="ourOffersSliderDrills">
-            <h3>Дрели</h3>
+            <p>Дрели</p>
             <p>Соседям на радость</p>
             <a href="#" class="button">Перейти в каталог</a>
           </div>
+          <div class="ourOffersSliderPerforators">
+            <p>Перфораторы</p>
+            <p>Настоящие мужские игрушки</p>
+            <a href="catalog.html" class="button">Перейти в каталог</a>
+          </div>
+          <button type="button" name="OffersSliderBtnPerforators" class="sliderLeft">Перфораторы</button>
+          <button type="button" name="OffersSliderBtnDrills" class="sliderRight">Дрели</button>
         </div>
-        <ul  class="ourOffersPrivileges">
+        <ul class="ourOffersPrivileges">
           <li>
-            <div  class="ourOffersSale">
-              <h3>Скидка 50%</h3>
+            <div class="ourOffersSale">
+              <p>Скидка 50%</p>
               <a href="#" class="button">На 350 товаров</a>
             </div>
           </li>
           <li>
-            <div  class="ourOffersDelivery">
-              <h3>Доставка</h3>
+            <div class="ourOffersDelivery">
+              <p>Доставка</p>
               <a href="#" class="button">Бесплатно</a>
             </div>
           </li>
         </ul>
       </section>
       <section class="popularGoods">
-        <header class="popularGoodsHeader">
+        <div class="popularGoodsHeader">
           <h2>Популярные товары</h2>
           <a href="#" class="button">Все популярные товары</a>
-        </header>
+        </div>
         <ul class="popularGoodsShowCase">
           <li>
             <div class="popularGoodsShowCaseItem">
               <img src="#" alt="BOSCH BFG 9000">
-              <button type="button" name="buy">КУПИТЬ</button>
-              <button type="button" name="bookmarks">В ЗАКЛАДКИ</button>
+              <button type="button" name="buy">купить</button>
+              <button type="button" name="bookmarks">в закладки</button>
               <p>Перфоратор BOSCH BFG 9000</p>
               <del>32500  Р.</del>
-              <a href="#" class="button">25500 Р.</a>
+              <span class="catalogItemCost">25500 Р.</span>
+              <a href="#" class="itemCard">Карточка товара</a>
             </div>
           </li>
           <li>
             <div class="popularGoodsShowCaseItem">
               <img src="#" alt="BOSCH BFG 3000">
-              <button type="button" name="buy">КУПИТЬ</button>
-              <button type="button" name="bookmarks">В ЗАКЛАДКИ</button>
+              <button type="button" name="buy">Купить</button>
+              <button type="button" name="bookmarks">В закладки</button>
               <p>Перфоратор BOSCH BFG 3000</p>
               <del>22500 Р.</del>
-              <a href="#" class="button">15500 Р.</a>
+              <span class="catalogItemCost">15500 Р.</span>
+              <a href="#" class="itemCard">Карточка товара</a>
             </div>
           </li>
           <li>
             <div class="popularGoodsShowCaseItem">
               <img src="#" alt="BOSCH BFG 6000">
-              <button type="button" name="buy">КУПИТЬ</button>
-              <button type="button" name="bookmarks">В ЗАКЛАДКИ</button>
+              <button type="button" name="buy">Купить</button>
+              <button type="button" name="bookmarks">В закладки</button>
               <p>Перфоратор BOSCH BFG 6000</p>
               <del>30500 Р.</del>
-              <a href="#" class="button">25500 Р.</a>
+              <span class="catalogItemCost">25500 Р.</span>
+              <a href="#" class="itemCard">Карточка товара</a>
             </div>
           </li>
           <li>
             <div class="popularGoodsShowCaseItem new">
               <img src="#" alt="BOSCH BFG 2000">
-              <button type="button" name="buy">КУПИТЬ</button>
-              <button type="button" name="bookmarks">В ЗАКЛАДКИ</button>
+              <button type="button" name="buy">Купить</button>
+              <button type="button" name="bookmarks">В закладки</button>
               <p>Перфоратор BOSCH BFG 2000</p>
               <del></del>
-              <a href="#" class="button">12500 Р.</a>
+              <span class="catalogItemCost">12500 Р.</span>
+              <a href="#" class="itemCard">Карточка товара</a>
             </div>
           </li>
         </ul>
       </section>
       <section class="popularFabricators">
-        <header class="popularFabricatorHeader">
+        <div class="popularFabricatorHeader">
           <h2>Популярные товары</h2>
           <a href="#" class="button">Все производители</a>
-        </header>
+        </div>
         <ul class="popularFabricatorsList">
           <li>
             <a href="#"><img src="#" alt="Bosh"></a>
@@ -223,6 +235,7 @@
     </main>
     <footer>
       <section class="information">
+        <h2 class="visually-hidden">Наш адрес и навигация по сайту</h2>
         <a href="#">
           <img src="#" alt="Техномарт">
         </a>
@@ -263,6 +276,7 @@
         </nav>
       </section>
       <section class="differentBlaBla">
+        <h2 class="visually-hidden">Написать нам</h2>
         <p>© 2010–2019 Компания «Техномарт»<br>
           Все права защищены
         </p>

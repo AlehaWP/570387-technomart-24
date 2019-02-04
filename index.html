@@ -8,10 +8,11 @@
   <body>
     <header>
       <div class="helloSearchBuy">
-        <img src="img/headerlogotechomart.svg" alt="Техномарт" width="111" height="18">
-        <form action="aaa.ru" method="get" class="search">
-          <button type="submit" class="searchButton"></button>
+        <img src="img/headerlogotechomart.svg" alt="Логотип магазина Техномарт" width="111" height="18">
+        <form action="https://echo.htmlacademy.ru" method="get" class="search">
+          <label  for="searchText" class="visually-hidden">Поиск по сайту, поле ввода</label>
           <input type="search" name="search" value="" placeholder="Поиск:" id="searchText">
+          <button type="submit" class="searchButton" id="searchBtn">Начать поиск</button>
         </form>
         <a href="#" class="button">Закладки</a>
         <a href="#" class="button">Корзина</a>
@@ -182,9 +183,9 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
         <ul class="servicesList">
-          <li><button type="button" name="buttonDelivery"></button></li>
-          <li><button type="button" name="buttonWarranty"></button></li>
-          <li><button type="button" name="buttonCredit"></button></li>
+          <li><button type="button" name="buttonDelivery">Доставка</button></li>
+          <li><button type="button" name="buttonWarranty">Гарантия</button></li>
+          <li><button type="button" name="buttonCredit">Кредит</button></li>
         </ul>
         <div class="servicesDelivery">
           <h3>Доставка</h3>
@@ -230,7 +231,7 @@
         <p>Вы можете забрать товар сами,
            заехав в наш офис:
         </p>
-        <img src="img/map.png" width="300" height="158" alt="Карта" class="contactsMap">
+        <a href="img/big_map.jpg">Карта с адресом<img src="img/map.png" width="300" height="158" alt="Карта" class="contactsMap"></a>
         <a href="#" class="button">Заблудились? Напишите нам</a>
       </section>
     </main>
@@ -238,7 +239,7 @@
       <section class="information">
         <h2 class="visually-hidden">Наш адрес и навигация по сайту</h2>
         <a href="#">
-          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Техномарт">
+          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Логотип компании Техномарт">
         </a>
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         <a href="tel:88125550555" class="footerCallMe">+7 (812) 555-05-55</a>
@@ -298,11 +299,34 @@
         </div>
         <div class="designedBy">
           <p>Разработано-</p>
-          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </div>
       </section>
     </footer>
-
-
+    <!--<section class="login_form visually-hidden">
+      <h2  class="visually-hidden">Вход в личный кабинет</h2>
+      <form action="https://echo.htmlacademy.ru" method="post" class="inPersonalAria">
+        <label  for="nameText">Ваше имя</label>
+        <input type="text" name="login" value="" placeholder="Имя:" id="nameText">
+        <button type="submit" class="searchButton" id="searchBtn">Отправить</button>
+      </form>
+    </section>-->
+    <section class="sendQuestion  visually-hidden">
+      <h2  class="visually-hidden">Задать вопрос</h2>
+      <form action="https://echo.htmlacademy.ru" method="post" class="sendQuestion_form">
+        <label  for="sendQuestion_name">Ваше имя</label>
+        <input type="text" name="userName" value="" placeholder="Имя:" id="sendQuestion_name">
+        <label  for="sendQuestion_Email">Ваш e-mail:</label>
+        <input type="email" name="userEmail" value="" placeholder="email:" id="sendQuestion_Email">
+        <label  for="sendQuestion_Question">Текст письма:</label>
+        <textarea name="userQuestion" rows="8" cols="80"  placeholder="В свободной форме" id="sendQuestion_Question"></textarea>
+        <button type="submit" class="searchButton" id="searchBtn">Отправить</button>
+      </form>
+    </section>
+    <section class="bigMap   visually-hidden">
+      <h2 class="visually-hidden">Увеличенная карта</h2>
+      <button type="button" name="closeButton" class="closeWindow">Закрыть окно</button>
+      <img src="img/big_map.jpg" width="940" height="447" alt="Увеличенная карта с указанием нашего расположения">
+    </section>
   </body>
 </html>

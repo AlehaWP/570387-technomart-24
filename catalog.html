@@ -8,10 +8,11 @@
   <body>
     <header>
       <div class="helloSearchBuy">
-        <a href="index.html"><img src="img/headerlogotechomart.svg" alt="Техномарт" width="111" height="18"></a>
-        <form action="aaa.ru" method="get" class="search">
-          <button type="submit" class="searchButton"></button>
+        <a href="index.html"><img src="img/headerlogotechomart.svg" alt="Логотип компании Техномарт" width="111" height="18"></a>
+        <form action="https://echo.htmlacademy.ru" method="get" class="search">
+          <label  for="searchText" class="visually-hidden">Поиск по сайту, поле ввода</label>
           <input type="search" name="search" value="" placeholder="Поиск:" id="searchText">
+          <button type="submit" class="searchButton" id="searchBtn">Начать поиск</button>
         </form>
         <a href="#" class="button">Закладки</a>
         <a href="#" class="button">Корзина</a>
@@ -61,7 +62,7 @@
       </section>
       <section class="catalogFilters">
         <h2 class="visually-hidden">Фильтр:</h2>
-        <form action="#" method="post" oninput="min.value=minrange.value; max.value=maxrange.value">
+        <form action="https://echo.htmlacademy.ru" method="post" oninput="min.value=minrange.value; max.value=maxrange.value">
           <fieldset class="filterCost">
             <legend>Цена:</legend>
             <input type="range" min="0" max="30000" name="minrange" step="100" value="0">
@@ -74,19 +75,19 @@
             <legend>Производители:</legend>
             <ul>
               <li>
-                <label><input type="checkbox" value="1">Bosh</label>
+                <label><input type="checkbox" value="1" name="boshCheck">Bosh</label>
               </li>
               <li>
-                <label><input type="checkbox" value="2">Интерскол</label>
+                <label><input type="checkbox" value="1" name="interscolCheck">Интерскол</label>
               </li>
               <li>
-                <label><input type="checkbox" value="3">Makita</label>
+                <label><input type="checkbox" value="1" name="makitaCheck">Makita</label>
               </li>
               <li>
-                <label><input type="checkbox" value="4">DeWalt</label>
+                <label><input type="checkbox" value="1" name="deWaltCheck">DeWalt</label>
               </li>
               <li>
-                <label><input type="checkbox" value="5">Hitachi</label>
+                <label><input type="checkbox" value="1" name="hitachiCheck">Hitachi</label>
               </li>
             </ul>
           </fieldset>
@@ -94,10 +95,10 @@
             <legend>Питание:</legend>
             <ul>
               <li>
-                <label><input type="radio" name="radioNutrion" value="1" checked>BOSCH</label>
+                <label><input type="radio" name="radioNutrion" value="1" checked>АККУМУЛЯТОРНЫЕ</label>
               </li>
               <li>
-                <label><input type="radio" name="radioNutrion" value="2">ИНТЕРСКОЛ</label>
+                <label><input type="radio" name="radioNutrion" value="2">СЕТЕВЫЕ</label>
               </li>
             </ul>
           </fieldset>
@@ -231,7 +232,7 @@
       <section class="information">
         <h2 class="visually-hidden">Наш адрес и навигация по сайту</h2>
         <a href="#">
-          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Техномарт">
+          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Логотип компании Техномарт">
         </a>
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         <a href="tel:88125550555" class="footerCallMe">+7 (812) 555-05-55</a>
@@ -291,11 +292,15 @@
         </div>
         <div class="designedBy">
           <p>Разработано-</p>
-          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </div>
       </section>
     </footer>
-
-
+    <section class="itemAdded  visually-hidden">
+      <h2>Товар добавлен в корзину</h2>
+      <button type="button" name="continueBuyButton" class="continueBuy">Продолжить покупки</button>
+      <button type="button" name="closeButton" class="closeWindow">Закрыть окно</button>
+      <a href="#">Продолжить покупки</a>
+    </section>
   </body>
 </html>

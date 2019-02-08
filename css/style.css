@@ -135,6 +135,149 @@ a{
   background-color: white;
 }
 
+.main-nav{
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.main-nav a{
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.main-nav a:hover,
+.main-nav a:focus
+{
+  color: #ffffff;
+  box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
+}
+
+.main-nav a:active{
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #1d2739;
+}
+
+.our-offers{
+  background-color: #ffffff;
+}
+
+.our-offers-materials,
+.our-offers-tools,
+.our-offers-technique,
+.our-offers-sale,
+.our-offers-delivery{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #ffffff;
+
+  background-color: #ffbf47;
+}
+
+.our-offers-tools{
+  background-color: #3bbce3;
+}
+
+.our-offers-technique{
+  background-color: #dc91d8;
+}
+
+.our-offers-sale{
+  background-color: #8ed78f
+}
+
+.our-offers-delivery{
+  background-color: #ffc047;
+}
+
+.our-offers-what-we-sell a,
+.our-offers-privileges a{
+  color:#ffffff;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.our-offers-what-we-sell a:hover,
+.our-offers-what-we-sell a:focus,
+.our-offers-privileges a:hover,
+.our-offers-privileges a:focus{
+  background-color: rgba(0,0,0,0.2);
+}
+
+.our-offers-what-we-sell a:active,
+.our-offers-privileges a:active{
+  background-color: rgba(0,0,0,0.3);
+}
+
+.our-offers-slider-drills{
+  font-family: "Cuprum", Arial, sans-serif;
+  color:#ffffff;
+  background-image: url("../img/mandrill.png");
+}
+
+.our-offers-slider-drills,
+.our-offers-slider-perforators{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.our-offers-slider-headline{
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.our-offers-slider-drills a,
+.our-offers-slider-perforators a{
+  font-size: 14px;
+  line-height: 18px;
+  color:#ffffff;
+
+  background-color: #ee3643;
+}
+
+.our-offers-slider-drills a:hover,
+.our-offers-slider-drills a:focus,
+.our-offers-slider-perforators a:hover,
+.our-offers-slider-perforators a:focus{
+  color:#ffffff;
+  background-color: #ca2c37;
+}
+
+.our-offers-slider-drills a:active,
+.our-offers-slider-perforators a:active{
+  color:#ffffff;
+  background-color: #ba2732;
+}
+
+.our-offers-slider-left,
+.our-offers-slider-right{
+  width:30px;
+  height:50px;
+  border:none;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+.our-offers-slider-right{
+  background-image: url("../img/icon-right.svg");
+}
+
+.offers-slider-btn-perforators,
+.offers-slider-btn-drills{
+  background-color: #ffffff;
+}
+
+.offers-slider-btn-perforators:active,
+.offers-slider-btn-drills:active{
+  background-color: #ee3643;
+}
+
 
 
 /*сокрытие элементов которые должны быть видны для роботов и читалок*/

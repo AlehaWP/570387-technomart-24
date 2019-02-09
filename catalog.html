@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
+    <header class="header-for-all">
       <div class="hello-search-buy">
-        <a href="index.html"><img src="img/headerlogotechomart.svg" alt="Логотип компании Техномарт" width="111" height="18"></a>
+        <a href="index.html"><img src="img/headerlogotechomart.svg" alt="Логотип компании Техномарт" width="111" height="18"  class="logo-img"></a>
         <form action="https://echo.htmlacademy.ru" method="get" class="search">
           <label  for="search-text" class="visually-hidden">Поиск по сайту, поле ввода</label>
           <input type="search" name="search" placeholder="Поиск:" id="search-text">
         </form>
-        <a href="#" class="button">Закладки</a>
-        <a href="#" class="button">Корзина</a>
-        <a href="#" class="button">Оформить заказ</a>
+        <a href="#" class="button hello-search-buy-user-choiсe">Закладки</a>
+        <a href="#" class="button hello-search-buy-user-choiсe">Корзина</a>
+        <a href="#" class="button buy">Оформить заказ</a>
       </div>
-      <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <p class="headline">Интернет-магазин строительных материалов и инструментов для ремонта</p>
       <div class="fast-contacts">
         <a href="tel:88125550555" class="call-me">+7 (812) 555-05-55</a>
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -30,8 +30,8 @@
           <a href="#" class="profile">Равшан Джамшутович</a>
           <a href="#" class="sign-out">Выход</a>
         </div>
-        <a href="#" class="button">Мои заказы</a>
-        <a href="#" class="button">Личный кабинет</a>
+        <a href="#" class="cabinet-button">Мои заказы</a>
+        <a href="#" class="cabinet-button">Личный кабинет</a>
       </div>
       <nav class="main-nav">
         <ul>
@@ -52,9 +52,9 @@
         <a class="bread-crumbs-item" href="#">Инструмент</a>
         <a class="bread-crumbs-item">Перфораторы</a>
       </div>
-      <h1>Перфораторы</h1>
+      <h1 class="daughter-page-h1">Перфораторы</h1>
       <section class="sorting-catalog">
-        <h2 class="visually-hidden">Сортировка:</h2>
+        <h2>Сортировка:</h2>
         <a href="" class="sorting-catalog-sort-buttons">По цене</a>
         <a href="" class="sorting-catalog-sort-buttons">По типу</a>
         <a href="" class="sorting-catalog-sort-buttons">По функционалу</a>
@@ -62,7 +62,7 @@
         <a href="" class="sorting-catalog-sort-direction">Вниз</a>
       </section>
       <section class="catalog-filters">
-        <h2 class="visually-hidden">Фильтр:</h2>
+        <h2>Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru" method="post" oninput="min.value=minrange.value; max.value=maxrange.value">
           <fieldset class="filter-cost">
             <legend>Цена:</legend>
@@ -117,7 +117,6 @@
               <p>Перфоратор BOSCH BFG 3000</p>
               <del>22500 Р.</del>
               <span class="catalog-item-cost">15500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -128,7 +127,6 @@
               <p>Перфоратор BOSCH BFG 6000</p>
               <del>30500 Р.</del>
               <span class="catalog-item-cost">25500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -139,7 +137,6 @@
               <p>Перфоратор BOSCH BFG 2000</p>
               <del></del>
               <span class="catalog-item-cost">12500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -150,7 +147,6 @@
               <p>Перфоратор BOSCH BFG 3000</p>
               <del>22500 Р.</del>
               <span class="catalog-item-cost">15500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -161,7 +157,6 @@
               <p>Перфоратор BOSCH BFG 6000</p>
               <del>30500 Р.</del>
               <span class="catalog-item-cost">25500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -172,7 +167,6 @@
               <p>Перфоратор BOSCH BFG 2000</p>
               <del></del>
               <span class="catalog-item-cost">12500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -183,7 +177,6 @@
               <p>Перфоратор BOSCH BFG 3000</p>
               <del>22500 Р.</del>
               <span class="catalog-item-cost">15500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -194,7 +187,6 @@
               <p>Перфоратор BOSCH BFG 6000</p>
               <del>30500 Р.</del>
               <span class="catalog-item-cost">25500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
           <li>
@@ -205,7 +197,6 @@
               <p>Перфоратор BOSCH BFG 2000</p>
               <del></del>
               <span class="catalog-item-cost">12500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
             </div>
           </li>
         </ul>
@@ -216,12 +207,10 @@
           <li><a href="#" class="button-next">Следующая</a></li>
         </ul>
       </section>
-      <section>
+      <section class="about-product">
         <h2>Пара слов о перфораторах</h2>
         <p>Перфоратор — универсальный строительный инструмент.
-          Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-        </p>
-        <p>
+          Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</br>
           Существуют электромеханические и пневматические перфораторы.
           Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
           В ассортиментном ряду есть выбор «трехрежимников»:
@@ -233,7 +222,7 @@
       <section class="information">
         <h2 class="visually-hidden">Наш адрес и навигация по сайту</h2>
         <a href="#">
-          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Логотип компании Техномарт">
+          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Логотип компании Техномарт" class="logo-img">
         </a>
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         <a href="tel:88125550555" class="footer-call-me">+7 (812) 555-05-55</a>
@@ -246,7 +235,7 @@
               <a href="#">Новости</a>
             </li>
             <li>
-              <a href="">Каталог</a>
+              <a href="catalog.html">Каталог</a>
             </li>
             <li>
               <a href="#">Доставка</a>
@@ -278,13 +267,13 @@
         </p>
         <ul>
           <li>
-            <a href="#">Вконтакте</a>
+            <a href="#" class="social-link">Вконтакте</a>
           </li>
           <li>
-            <a href="#" lang="en">Facebook</a>
+            <a href="#" class="social-link" lang="en">Facebook</a>
           </li>
           <li>
-            <a href="#" lang="en">Instagram</a>
+            <a href="#" class="social-link" lang="en">Instagram</a>
           </li>
         </ul>
         <div class="fast-email">

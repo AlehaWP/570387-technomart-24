@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="index-header">
+    <header class="index-header header-for-all">
       <div class="hello-search-buy">
         <img src="img/headerlogotechomart.svg" alt="Логотип магазина Техномарт" width="111" height="18" class="logo-img">
         <form action="https://echo.htmlacademy.ru" method="get" class="search">
@@ -19,7 +19,7 @@
         <a href="#" class="button hello-search-buy-user-choiсe">Корзина</a>
         <a href="#" class="button buy">Оформить заказ</a>
       </div>
-      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <h1 class="headline">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <div class="fast-contacts">
         <a href="tel:88125550555" class="call-me">+7 (812) 555-05-55</a>
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -47,19 +47,19 @@
           <li>
             <div class="our-offers-materials new">
               <p>Материалы</p>
-              <a href="#" class="button">На любой вкус</a>
+              <a href="#" class="our-offers-button">На любой вкус</a>
             </div>
           </li>
           <li>
             <div  class="our-offers-tools">
               <p>Инструмент</p>
-              <a href="#" class="button">На все случаи</a>
+              <a href="#" class="our-offers-button">На все случаи</a>
             </div>
           </li>
           <li>
             <div  class="our-offers-technique">
               <p>Техника</p>
-              <a href="#" class="button">Для стройки</a>
+              <a href="#" class="our-offers-button">Для стройки</a>
             </div>
           </li>
         </ul>
@@ -69,13 +69,12 @@
           <div class="our-offers-slider-drills">
             <p class="our-offers-slider-headline">Дрели</p>
             <p>Соседям на радость</p>
-            <a href="#" class="button">Перейти в каталог</a>
+            <a href="#" class="red-button">Открыть каталог</a>
           </div>
           <div class="our-offers-slider-perforators">
             <p class="our-offers-slider-headline">Перфораторы</p>
             <p>Настоящие мужские игрушки</p>
-            <a href="catalog.html" class="button">Перейти в каталог</a>
-          </div>
+            <a href="catalog.html" class="red-button">Открыть каталог</a> </div>
           <button type="button" name="offers-slider-btn-perforators" class="slider-left">Перфораторы</button>
           <button type="button" name="offers-slider-btn-drills" class="slider-right">Дрели</button>
         </div>
@@ -83,13 +82,13 @@
           <li>
             <div class="our-offers-sale">
               <p>Скидка 50%</p>
-              <a href="#" class="button">На 350 товаров</a>
+              <a href="#" class="our-offers-button">На 350 товаров</a>
             </div>
           </li>
           <li>
             <div class="our-offers-delivery">
               <p>Доставка</p>
-              <a href="#" class="button">Бесплатно</a>
+              <a href="#" class="our-offers-button">Бесплатно</a>
             </div>
           </li>
         </ul>
@@ -97,59 +96,55 @@
       <section class="popular-goods">
         <div class="popular-goods-header">
           <h2>Популярные товары</h2>
-          <a href="#" class="button">Все популярные товары</a>
+          <a href="#" class="red-button">Все популярные товары</a>
         </div>
-        <ul class="popular-goods-show-case">
+        <ul class="popular catalog-item">
           <li>
-            <div class="popular-goods-show-case-item">
+            <div class="popular catalog-item">
               <img src="img/bosh_9000.png" alt="BOSCH BFG 9000" width="218" height="170">
-              <a href="#" class="catalog-item-button-buy">Купить</a>
-              <button type="button" name="bookmarks">в закладки</button>
-              <p>Перфоратор BOSCH BFG 9000</p>
+              <a href="#" class="popular catalog-item-button-buy">Купить</a>
+              <button type="button" name="popular-catalog-item-bookmarks">в закладки</button>
+              <p class="popular catalog-item-name">Перфоратор BOSCH BFG 9000</p>
               <del>32500  Р.</del>
-              <span class="catalog-item-cost">25500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
+              <span class="popular catalog-item-cost">25500 Р.</span>
             </div>
           </li>
           <li>
-            <div class="popular-goods-show-case-item">
-              <img src="img/bosh_3000.png" alt="BOSCH BFG 3000"  width="218" height="170">
-              <a href="#" class="catalog-item-button-buy">Купить</a>
-              <button type="button" name="bookmarks">В закладки</button>
-              <p>Перфоратор BOSCH BFG 3000</p>
-              <del>22500 Р.</del>
-              <span class="catalog-item-cost">15500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
+            <div class="popular catalog-item">
+              <img src="img/bosh_3000.png" alt="BOSCH BFG 3000" width="218" height="170">
+              <a href="#" class="popular catalog-item-button-buy">Купить</a>
+              <button type="button" name="popular-catalog-item-bookmarks">в закладки</button>
+              <p class="popular catalog-item-name">Перфоратор BOSCH BFG 3000</p>
+              <del>22500  Р.</del>
+              <span class="popular catalog-item-cost">15500 Р.</span>
             </div>
           </li>
           <li>
-            <div class="popular-goods-show-case-item">
-              <img src="img/bosh_6000.png" alt="BOSCH BFG 6000"  width="218" height="170">
-              <a href="#" class="catalog-item-button-buy">Купить</a>
-              <button type="button" name="bookmarks">В закладки</button>
-              <p>Перфоратор BOSCH BFG 6000</p>
-              <del>30500 Р.</del>
-              <span class="catalog-item-cost">25500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
+            <div class="popular catalog-item">
+              <img src="img/bosh_6000.png" alt="BOSCH BFG 6000" width="218" height="170">
+              <a href="#" class="popular catalog-item-button-buy">Купить</a>
+              <button type="button" name="popular-catalog-item-bookmarks">в закладки</button>
+              <p class="popular catalog-item-name">Перфоратор BOSCH BFG 6000</p>
+              <del>30500  Р.</del>
+              <span class="popular catalog-item-cost">25500 Р.</span>
             </div>
           </li>
           <li>
-            <div class="popular-goods-show-case-item new">
-              <img src="img/bosh_2000.png" alt="BOSCH BFG 2000"  width="218" height="170">
-              <a href="#" class="catalog-item-button-buy">Купить</a>
-              <button type="button" name="bookmarks">В закладки</button>
-              <p>Перфоратор BOSCH BFG 2000</p>
+            <div class="popular catalog-item new">
+              <img src="img/bosh_3000.png" alt="BOSCH BFG 3000" width="218" height="170">
+              <a href="#" class="popular catalog-item-button-buy">Купить</a>
+              <button type="button" name="popular-catalog-item-bookmarks">в закладки</button>
+              <p class="popular catalog-item-name">Перфоратор BOSCH BFG 2000</p>
               <del></del>
-              <span class="catalog-item-cost">12500 Р.</span>
-              <a href="#" class="catalog-item-card">Карточка товара</a>
+              <span class="popular catalog-item-cost">12500 Р.</span>
             </div>
           </li>
         </ul>
       </section>
       <section class="popular-fabricators">
         <div class="popular-fabricator-header">
-          <h2>Популярные товары</h2>
-          <a href="#" class="button">Все производители</a>
+          <h2>Популярные производители</h2>
+          <a href="#" class="red-button">Все производители</a>
         </div>
         <ul class="popular-fabricators-list">
           <li>
@@ -208,7 +203,7 @@
           <p>Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
           </p>
-          <a href="#" class="button">Подать заявку</a>
+          <a href="#" class="red-button">Подать заявку</a>
         </div>
       </section>
       <section class="about-us">
@@ -225,7 +220,7 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#" class="button">Подробнее о компании</a>
+        <a href="#" class="red-button">Подробнее о компании</a>
 	  </section>
 	  <section class="contacts">
         <h2>Контакты</h2>
@@ -233,14 +228,14 @@
            заехав в наш офис:
         </p>
         <a href="img/big_map.jpg">Карта с адресом<img src="img/map.png" width="300" height="158" alt="Карта" class="contacts-map"></a>
-        <a href="#" class="button">Заблудились? Напишите нам</a>
+        <a href="#" class="red-button">Заблудились? Напишите нам</a>
       </section>
     </main>
     <footer>
       <section class="information">
         <h2 class="visually-hidden">Наш адрес и навигация по сайту</h2>
         <a href="#">
-          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Логотип компании Техномарт">
+          <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Логотип компании Техномарт" class="logo-img">
         </a>
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         <a href="tel:88125550555" class="footer-call-me">+7 (812) 555-05-55</a>
@@ -285,13 +280,13 @@
         </p>
         <ul>
           <li>
-            <a href="#">Вконтакте</a>
+            <a href="#" class="social-link">Вконтакте</a>
           </li>
           <li>
-            <a href="#" lang="en">Facebook</a>
+            <a href="#" class="social-link" lang="en">Facebook</a>
           </li>
           <li>
-            <a href="#" lang="en">Instagram</a>
+            <a href="#" class="social-link" lang="en">Instagram</a>
           </li>
         </ul>
         <div class="fast-email">

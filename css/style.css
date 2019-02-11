@@ -42,12 +42,12 @@ a{
   background-color:#ee3643;
 }
 
-.logo-img:hover,
-.logo-img:focus{
+.logo:hover,
+.logo:focus{
   background-color:#ca2c37
 }
 
-.logo-img:active{
+.logo:active{
   background-color:#ba2732
 }
 
@@ -173,14 +173,13 @@ a{
 
 .profile:active{
   color: rgba(0, 0, 0, 0.3);
-  opacity: 0.3;
 }
 
 .cabinet-button{
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
-  color: ##32425c;
+  color: #32425c;
 }
 
 .cabinet-button a:hover,
@@ -222,7 +221,7 @@ a{
 }
 
 .bread-crumbs-item{
-  font-family: "PTSans", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
@@ -462,10 +461,12 @@ a{
   color: #000000;
 }
 
-.catalog-item-name{
+.catalog-item-card{
   font-size: 18px;
   line-height: 20px;
   text-align: center;
+  text-decoration:none;
+  color: inherit;
 }
 
 

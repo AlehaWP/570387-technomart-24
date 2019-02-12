@@ -1,3 +1,11 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+
 body{
   margin:0;
   padding:0;
@@ -38,8 +46,9 @@ a{
   color: #ffffff;
 }
 
-.logo-img{
+.logo{
   background-color:#ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 .logo:hover,
@@ -368,6 +377,8 @@ a{
 .our-offers-slider-drills,
 .our-offers-slider-perforators{
   font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
   color:#ffffff;
   background-image: url("../img/mandrill.png");
   background-repeat: no-repeat;
@@ -375,12 +386,6 @@ a{
 
 .our-offers-slider-perforators{
   background-image: url("../img/manperforator.png");
-}
-
-.our-offers-slider-drills,
-.our-offers-slider-perforators{
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .our-offers-slider-headline{
@@ -440,7 +445,7 @@ a{
   font-family: "Cuprum", Arial, sans-serif;
   color: #32425c;
 
-  background-color: #f9f5f0;
+   background-color: #f9f5f0;
 }
 
 .popular-goods-header h2,
@@ -745,4 +750,243 @@ a{
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/*Сеточные стили*/
+html,
+body {
+  margin:0;
+  padding: 0;
+  min-width: 1200px;
+  min-height: 3150px;
+}
+
+
+.center-container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+.header-for-all{
+  min-height: 320px;
+  margin-top: 0;
+}
+
+.index-header{
+  margin-bottom: 59px;
+}
+
+.hello-search-buy{
+  width: 100%;
+  min-height: 42px;
+}
+
+.hello-search-buy .center-container{
+  display: flex;
+}
+
+
+.logo{
+  /* margin:0; */
+  /* padding:0; */
+  width: 220px;
+  height: 47px;
+  padding-top: 13px;
+  padding-left: 55px;
+  margin-bottom: -5px;
+  /* Временно для сетки */
+  display: block;
+}
+
+.center-container.headline{
+  display: flex;
+  min-height: 158px;
+}
+
+.main-nav{
+  min-height: 60px;
+}
+
+.main-nav ul{
+  display: flex;
+  margin-top:0;
+  list-style:none;
+}
+
+.our-offers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  margin-bottom: 53px;
+
+  /* Временно для сетки */
+  min-height: 409px;
+
+}
+
+.our-offers-what-we-sell{
+  display:flex;
+  width: 100%;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+  list-style: none;
+
+
+}
+
+.our-offers-slider{
+  flex-grow: 2;
+
+  display:flex;
+  /* Временно для сетки */
+  max-height: 266;
+}
+
+.our-offers-privileges{
+  flex-grow: 1;
+
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  /* Временно для сетки */
+  max-height: 266;
+}
+
+.popular-goods{
+  margin-bottom: 21px;
+}
+
+.popular-goods-header,
+.popular-fabricator-header{
+  display:flex;
+  align-items: center;
+  padding: 0 24px 2px 30px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  /* Временно для сетки */
+  min-height: 89px;
+}
+
+.catalog-item{
+  display: flex;
+  justify-content: space-between;
+  margin:0px;
+  margin-block-start:0;
+  margin-block-end:0;
+  padding-inline-start: 0px;
+
+  list-style: none;
+
+  /* Временно для сетки */
+  min-height: 318px;
+}
+
+.popular-fabricators{
+  margin-bottom: 85px;
+}
+
+.popular-fabricators-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:0px;
+  margin-block-start:0;
+  margin-block-end:0;
+  padding-inline-start: 0px;
+
+  list-style: none;
+
+  /* Временно для сетки */
+  min-height: 310px;
+}
+
+.services{
+  margin-bottom: 82px;
+  /* Временно для сетки */
+  min-height: 522px;
+
+}
+
+.company-contacts{
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 86px;
+
+  /* Временно для сетки */
+  min-height: 368px;
+}
+
+.background-container-information{
+  width: 100%;
+  background-color: #32425c;
+}
+
+.information{
+  display:flex;
+  flex-wrap: wrap;
+  /* Временно для сетки */
+  min-height: 300px;
+}
+
+.information .left-box,
+.information .footer-nav{
+  display:flex;
+  flex-direction: column;
+}
+
+.footer-nav ul{
+  display:flex;
+  list-style: none;
+  margin: 0;
+}
+
+.background-container-different{
+  width: 100%;
+  background-color: #293449;
+}
+
+
+
+/*Временные стили*/
+body{
+  background: url("../technomart-preview/technomart-index.jpg");
+  background-size: 1200px auto;
+  background-repeat: no-repeat;
+}
+
+.header-for-all{
+  background-color: rgba(180, 55, 55, 0.3);
+  outline: 1px dotted gray;
+}
+
+/* .header-for-all *{margin-top: inherit;} */
+
+.hello-search-buy{
+  background-color: rgba(180, 180, 55, 0.3);
+  outline: 1px dotted lightgray;
+}
+
+.center-container.headline{
+  background-color: rgba(180, 200, 200, 0.3);
+}
+
+main{
+  /* background-color: rgba(210, 100, 200, 0.3); */
+  outline: 1px solid lightgray;
+}
+
+.our-offers{
+  background-color: rgba(210, 100, 200, 0.3);
+  outline: 1px dotted black;
+}
+
+.catalog-item,
+.popular-goods-header{
+  background-color: rgba(30, 209, 21, 0.1);
+  /* --outline: 1px dotted black; */
 }

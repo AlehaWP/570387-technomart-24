@@ -760,7 +760,7 @@ body {
   min-width: 1200px;
 
   /* Временно для сетки */
-  min-height: 3150px;
+  /* min-height: 3150px; */
 }
 
 
@@ -955,6 +955,86 @@ body {
 }
 
 
+/* Каталог стили */
+.catalog-header{
+  margin: 0;
+}
+
+p.headline{
+  margin: 0;
+}
+
+.bread-crumbs{
+  display: flex;
+  justify-content: flex-start;
+
+  /* Временно для сетки */
+  min-height: 59px;
+
+}
+
+.daughter-page-h1{
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  /* Временно для сетки */
+  min-height: 89px;
+}
+
+.bread-crumbs a{
+  margin: 0;
+  margin-right: 15px;
+}
+
+.catalog-and-options{
+  display : flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+
+.catalog-and-options .left-container{
+  flex-basis: 220px;
+  align-self: flex-start;
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
+}
+
+.catalog-and-options .right-container{
+  flex-basis: 700px;
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-list-items{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.catalog-list-items li{
+  flex-basis: 218px;
+}
+
+.catalog-buttons-page{
+  display: flex;
+  justify-content: space-between;
+  width: 294px;
+  list-style: none;
+}
+
+.about-product{
+  /* Временно для сетки */
+  min-height: 261px;
+}
+
+.about-product h2{
+  margin: 0;
+}
 
 /*Временные стили*/
 /*

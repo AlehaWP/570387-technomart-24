@@ -48,7 +48,7 @@ a{
 
 .logo{
   background-color:#ee3643;
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 .logo:hover,
@@ -216,7 +216,7 @@ a{
 .main-nav a:focus
 {
   color: #ffffff;
-  box-shadow: inset 0px -5px 0 0 #293449;
+  box-shadow: inset 0 -5px 0 0 #293449;
   background-color: #32425c;
 }
 
@@ -496,14 +496,14 @@ a{
   text-align: center;
   color: #ffffff;
 
-  box-shadow: inset 0px -3px 0 0 rgb(54, 115, 21);
+  box-shadow: inset 0 -3px 0 0 rgb(54, 115, 21);
   background-color: rgb(99, 166, 62);
 }
 
 .catalog-item-button-buy:hover,
 .catalog-item-button-buy:focus{
   color: #ffffff;
-  box-shadow: inset 0px -3px 0 0 #367315;
+  box-shadow: inset 0 -3px 0 0 #367315;
   background-color: #5fbb2d;
 }
 
@@ -568,13 +568,13 @@ a{
 .popular-fabricators-list li:hover,
 .popular-fabricators-list li:focus{
   border: none;
-  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .popular-fabricators-list li:active{
   border: none;
   opacity: 0.5;
-  box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
 .services{
@@ -622,21 +622,21 @@ a{
   color: #ffffff;
 
   background-color: #32425c;
-  box-shadow: inset 0px -1px 0 0 #32425c;
+  box-shadow: inset 0 -1px 0 0 #32425c;
 }
 
 .services-list button:hover,
 .services-list button:focus{
   color: #ffffff;
   background-color: #293449;
-  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+  box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
 }
 
 .services-list button:active{
   color: #32425c;
 
   background-color: #ffffff;
-  box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
 }
 
 .about-us,
@@ -705,7 +705,7 @@ a{
   color: rgba(255, 209, 128, 0.5);
 }
 
-.different-bla-bla{
+.different-links{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -725,17 +725,17 @@ a{
   background-color: #ee3643;
 }
 
-.different-bla-bla a{
+.different-links a{
   color: #ffd180;
 }
 
-.different-bla-bla a:hover,
-.different-bla-bla a:focus{
+.different-links a:hover,
+.different-links a:focus{
   color: #ffd180;
   text-decoration: underline;
 }
 
-.different-bla-bla a:active{
+.different-links a:active{
   color: #ee3643;
   text-decoration: none;
 }
@@ -758,6 +758,8 @@ body {
   margin:0;
   padding: 0;
   min-width: 1200px;
+
+  /* Временно для сетки */
   min-height: 3150px;
 }
 
@@ -765,7 +767,7 @@ body {
 .center-container {
   width: 940px;
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0 0;
 }
 
 .header-for-all{
@@ -878,7 +880,7 @@ body {
   margin:0px;
   margin-block-start:0;
   margin-block-end:0;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
 
   list-style: none;
 
@@ -894,10 +896,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin:0px;
-  margin-block-start:0;
-  margin-block-end:0;
-  padding-inline-start: 0px;
+  margin:0;
 
   list-style: none;
 
@@ -921,12 +920,11 @@ body {
   min-height: 368px;
 }
 
-.background-container-information{
+.information{
   width: 100%;
-  background-color: #32425c;
 }
 
-.information{
+.information .center-container{
   display:flex;
   flex-wrap: wrap;
   /* Временно для сетки */
@@ -945,14 +943,21 @@ body {
   margin: 0;
 }
 
-.background-container-different{
+.different-links{
   width: 100%;
-  background-color: #293449;
+  /* Временно для сетки */
+  min-height: 107px;
+}
+
+.different-links .center-container{
+  display:flex;
+  justify-content: space-between;
 }
 
 
 
 /*Временные стили*/
+/*
 body{
   background: url("../technomart-preview/technomart-index.jpg");
   background-size: 1200px auto;
@@ -964,7 +969,7 @@ body{
   outline: 1px dotted gray;
 }
 
-/* .header-for-all *{margin-top: inherit;} */
+
 
 .hello-search-buy{
   background-color: rgba(180, 180, 55, 0.3);
@@ -976,7 +981,6 @@ body{
 }
 
 main{
-  /* background-color: rgba(210, 100, 200, 0.3); */
   outline: 1px solid lightgray;
 }
 
@@ -988,5 +992,4 @@ main{
 .catalog-item,
 .popular-goods-header{
   background-color: rgba(30, 209, 21, 0.1);
-  /* --outline: 1px dotted black; */
-}
+} */

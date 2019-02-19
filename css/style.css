@@ -33,6 +33,7 @@ img{
   padding: 10px 55px;
   border-radius: 3px;
 
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -472,16 +473,20 @@ header .logo{
   align-content: stretch;
   margin-bottom: 53px;
 
-  /* TODO: убрать 1 строку */
-  min-height: 409px;
-
   background-color: #ffffff;
+}
+
+.our-offers-what-we-sell p,
+.our-offers-privileges p{
+  padding: 0;
+  margin: 0;
 }
 
 
 .our-offers-what-we-sell{
+  margin: 0;
+  padding: 0;
   display:flex;
-  justify-content: space-between;
   width: 100%;
   margin:0;
   margin-bottom: 20px;
@@ -490,11 +495,18 @@ header .logo{
   list-style: none;
 }
 
-.our-offers-materials,
-.our-offers-tools,
-.our-offers-technique,
-.our-offers-sale,
-.our-offers-delivery{
+.our-offers-privileges{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.our-offers-card{
+  width: 300px;
+  height: 123px;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -504,19 +516,39 @@ header .logo{
   background-color: #ffbf47;
 }
 
-.our-offers-tools{
+.our-offers-what-we-sell .our-offers-card{
+  margin-right: 20px;
+}
+
+.our-offers-what-we-sell li:last-child .our-offers-card{
+  margin-right: 0;
+}
+
+.our-offers-privileges .our-offers-card{
+  margin-bottom: 20px;
+}
+
+.our-offers-privileges li:last-child .our-offers-card{
+  margin-bottom: 0;
+}
+
+.our-offers-card.materials{
+  background-color: #ffbf47;
+}
+
+.our-offers-card.tools{
   background-color: #3bbce3;
 }
 
-.our-offers-technique{
+.our-offers-card.technique{
   background-color: #dc91d8;
 }
 
-.our-offers-sale{
+.our-offers-card.sale{
   background-color: #8ed78f
 }
 
-.our-offers-delivery{
+.our-offers-card.delivery{
   background-color: #ffc047;
 }
 
@@ -538,11 +570,33 @@ header .logo{
 }
 
 .our-offers-slider{
+  position: relative;
+  width: 620px;
+  height: 266px;
+  margin-right: 20px;
   flex-grow: 2;
 
   display:flex;
-  /* TODO: убрать 1 строку */
-  max-height: 266px;
+}
+
+.our-offers-slider-perforators,
+.our-offers-slider-drills{
+  width: 100%;
+}
+
+.our-offers-slider-arrows{
+  position: absolute;
+}
+
+.our-offers-slider-btn{
+  position: absolute;
+}
+
+.our-offers-slider-btn button{
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
 }
 
 .our-offers-slider-drills,
@@ -988,43 +1042,53 @@ header .logo{
   background-color: #ee3643;
 }
 
-.popular-fabricators{
-  margin-bottom: 85px;
+.fabricators{
+  margin-bottom: 65px;
 }
 
-.popular-fabricators-list{
+.fabricators-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin:0;
+  padding: 0;
 
   list-style: none;
 
-  /* TODO: убрать 1 строку */
-  min-height: 310px;
 }
 
-.popular-fabricators-list li{
+.fabricators-list li{
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-.popular-fabricators-list li:hover,
-.popular-fabricators-list li:focus{
+.fabricators-list li:nth-child(4n){
+  margin-right: 0;
+}
+
+.fabricators-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 145px;
+}
+
+.fabricators-list li:hover,
+.fabricators-list li:focus{
   border: none;
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.popular-fabricators-list li:active{
+.fabricators-list li:active{
   border: none;
   opacity: 0.5;
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
 .services{
-  margin-bottom: 82px;
-  /* TODO: убрать 1 строку */
-  min-height: 522px;
+  margin-bottom: 77px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1033,6 +1097,13 @@ header .logo{
   color: #000000;
 
   background-color: #f4f7f9;
+}
+
+.services .center-container{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+
 }
 
 .about-product{
@@ -1050,18 +1121,62 @@ header .logo{
   font-size: 30px;
   line-height: 30px;
   text-align: left;
+  text-transform: uppercase;
 }
 
-.services h3{
-  font-family: "Cuprum", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 36px;
-  text-align: left;
-  color: #32425c;
+.services h2{
+  margin: 0;
+  padding: 0;
+  margin-top: 65px;
+  margin-bottom: 25px;
 }
 
-.services-list button{
+.services-prelude{
+  margin: 0;
+  margin-bottom: 66px;
+  width: 398px;
+}
+
+.services-list{
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.services-list-buttons{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: 240px;
+  margin: 0;
+  margin-right: 80px;
+  /* Распорка для картинки */
+  margin-bottom: 100px;
+  padding: 0;
+  padding-top: 2px;
+
+  list-style: none;
+
+}
+
+.services-list-buttons::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  top: -48px;
+  right: 0;
+  background-image: url("../img/layer-services-buttons.png");
+
+}
+
+.services-list-button{
+  width: 100%;
+  padding: 16px 0;
+  padding-left: 23px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 21px;
@@ -1069,30 +1184,88 @@ header .logo{
   text-align: left;
   color: #ffffff;
 
+  border: none;
   background-color: #32425c;
   box-shadow: inset 0 -1px 0 0 #32425c;
+
+  cursor: pointer;
 }
 
-.services-list button:hover,
-.services-list button:focus{
+.services-list-button:hover,
+.services-list-button:focus{
   color: #ffffff;
+  outline-color: transparent;
   background-color: #293449;
   box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
 }
 
-.services-list button:active{
+.services-list-button:active,
+.services-list-button.actived{
   color: #32425c;
-
+  outline-color: transparent;
   background-color: #ffffff;
   box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
 }
+
+.services h3{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.services-delivery{
+    display: none;
+    flex-grow: 1;
+    background:transparent url("../img/delivery.png") 100% 100% no-repeat;
+}
+.services-delivery.actived{
+  display:block;
+}
+
+.services-delivery-description{
+  width:  275px;
+}
+
+.services-guaranty{
+    display: none;
+    flex-grow: 1;
+    background:transparent url("../img/guaranty.png") 100% 100% no-repeat;
+}
+
+.services-guaranty.actived{
+  display:block;
+}
+
+.services-guaranty-description{
+  width:  379px;
+}
+
+.services-credit{
+    display: none;
+    flex-grow: 1;
+    background:transparent url("../img/credit.png") 100% 100% no-repeat;
+}
+
+.services-credit.actived{
+  display:block;
+}
+
+.services-credit-description{
+  width:  379px;
+  margin-bottom: 31px;
+}
+
 .company-contacts{
   display:flex;
   justify-content: space-between;
   margin-bottom: 86px;
-
-  /* TODO: убрать 1 строку */
-  min-height: 368px;
 }
 
 .about-us,
@@ -1106,20 +1279,82 @@ header .logo{
   background-color: #ffffff;
 }
 
+.about-us{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 519px;
+  flex-shrink: 0;
+  margin-right: 121px;
+}
+
+.contacts{
+  display: flex;
+  flex-basis: 300px;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+
 .about-us h2,
 .contacts h2{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
+.about-us p,
+.contacts p{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  white-space: pre-line;
+}
+
+.about-us-transport-companies{
+  margin: 0;
+  padding: 0;
+  margin-top: -2px;
+  margin-bottom: 15px;
+  padding-left: 36px;
+  list-style: none;
+
+}
+
 .about-us li{
+  position: relative;
+  margin-bottom: 20px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
 }
 
+.about-us .red-button{
+  align-self: flex-start;
+  padding-left: 41px;
+  padding-right: 40px;
+  /* margin-top: auto;
+  margin-bottom: 0;   */
+}
+
+
+.contacts p{
+  margin-bottom: 33px;
+}
+.contacts-map{
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+.contacts .red-button{
+  padding-left: 63px;
+  padding-right: 59px;
+  /* margin-top: auto;
+  margin-bottom: 0; */
+}
 
 .about-product{
   /* TODO: убрать 1 строку */

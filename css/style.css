@@ -514,6 +514,52 @@ header .logo{
   color: #ffffff;
 
   background-color: #ffbf47;
+  background-position: 83% 50%;
+  background-repeat: no-repeat;
+}
+
+.materials{
+  background-image: url("../img/material.svg");
+}
+
+.tools{
+  background-image: url("../img/tools.svg");
+}
+
+.technique{
+  background-image: url("../img/technique.svg");
+}
+
+.sale{
+  background-image: url("../img/sale.svg");
+}
+
+.delivery{
+  background-image: url("../img/offersdelivery.svg");
+}
+
+.our-offers-card p{
+  margin: 0;
+  margin-bottom: 12px;
+  padding:0;
+  padding-top: 21px;
+  padding-left: 22px;
+
+}
+
+.our-offers-card a{
+  display: inline-block;
+  /* padding: 0;
+  margin: 0; */
+  width: 135px;
+  height: 38px;
+  margin-left: 25px;
+  padding-top: 8px;
+
+  text-align: center;
+
+  border-radius: 2px;
+  /* padding: 11px 27px 9px 20px; */
 }
 
 .our-offers-what-we-sell .our-offers-card{
@@ -584,19 +630,59 @@ header .logo{
   width: 100%;
 }
 
-.our-offers-slider-arrows{
+.our-offers-slider-headline,
+.our-offers-slider-tagline{
+    padding: 0;
+    margin: 0;
+    margin-left: 25px;
+}
+
+.our-offers-slider-headline{
+  margin-top: 23px;
+  margin-bottom: 2px;
+}
+
+.our-offers-slider-open-catalog{
   position: absolute;
+  left: 25px;
+  bottom: 22px;
+  padding-right: 47px;
+  padding-left: 49px;
 }
 
 .our-offers-slider-btn{
   position: absolute;
+  bottom: 33px;
+  left: 47.7%;
 }
 
 .our-offers-slider-btn button{
   font-size: 0;
-  width: 15px;
-  height: 15px;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+
+  border: 2px solid white;
   border-radius: 50%;
+  outline: transparent;
+  background-color: white;
+  cursor: pointer;
+}
+
+.our-offers-slider-btn button:active,
+.our-offers-slider-btn button.actived{
+  background-color: #ee3643;
+  outline: transparent;
+}
+
+.our-offers-slider-arrows{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4%;
+  top: 43%;
+  width: 94%;
 }
 
 .our-offers-slider-drills,
@@ -627,8 +713,6 @@ header .logo{
   justify-content: space-between;
   flex-direction: column;
 
-  /* TODO: убрать 1 строку */
-  max-height: 266;
 }
 
 .our-offers-slider-left,
@@ -1320,6 +1404,22 @@ header .logo{
   margin-bottom: 15px;
   padding-left: 36px;
   list-style: none;
+
+}
+
+.about-us-transport-companies li{
+  position: relative;
+}
+
+.about-us-transport-companies li::before{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -35px;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color:  #ee3643;
 
 }
 

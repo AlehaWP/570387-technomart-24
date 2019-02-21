@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body  class="catalog-body">
+  <body class="catalog-body">
     <header class="catalog-header header-for-all">
       <div class="hello-search-buy">
         <div class="center-container">
-          <a href="index.html" class="logo"><img src="img/headerlogotechomart.svg" alt="Логотип компании Техномарт" width="111" height="18"  class="logo-img"></a>
+          <a href="index.html" class="logo">
+            <img src="img/headerlogotechomart.svg" alt="Логотип компании Техномарт" width="111" height="18" class="logo-img">
+          </a>
           <form action="https://echo.htmlacademy.ru" method="get" class="search">
             <input type="search" name="search" placeholder="Поиск:" id="search-text">
-            <label  for="search-text">Поиск по сайту, поле ввода</label>
+            <label for="search-text">Поиск по сайту, поле ввода</label>
           </form>
           <a href="#" class="button hello-search-buy-user-choiсe btn-bookmarks">Закладки: 0</a>
           <a href="#" class="button hello-search-buy-user-choiсe btn-basket">Корзина: 0</a>
@@ -28,13 +31,13 @@
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="user">
-          <div class="user-fio-and-buttons">
-            <a href="#" class="profile">Иконка</a>
-            <a href="#" class="profile">Равшан Джамшутович</a>
-            <a href="#" class="sign-out">Выход</a>
+          <div class="user-cabinet">
+            <!-- <a href="#" class="user-cabinet-icon">Иконка</a> -->
+            <a href="#" class="user-cabinet-name">Равшан Джамшутович</a>
+            <a href="#" class="user-cabinet-logout">Выход</a>
           </div>
-          <a href="#" class="cabinet-button">Мои заказы</a>
-          <a href="#" class="cabinet-button">Личный кабинет</a>
+          <a href="#" class="cabinet-button order">Мои заказы</a>
+          <a href="#" class="cabinet-button cabinet">Личный кабинет</a>
         </div>
       </div>
       <nav class="main-nav center-container">
@@ -51,20 +54,22 @@
     </header>
     <main class="catalog-main">
       <div class="bread-crumbs center-container">
-        <a href="index.html" class="home">Дом</a>
-        <a class="bread-crumbs-item" href="#">Каталог</a>
-        <a class="bread-crumbs-item" href="#">Инструмент</a>
+        <a href="index.html" class="home bread-crumbs-item"><span class="visually-hidden">Дом</span></a>
+        <a href="#" class="bread-crumbs-item">Каталог</a>
+        <a href="#" class="bread-crumbs-item" href="#">Инструмент</a>
         <a class="bread-crumbs-item">Перфораторы</a>
       </div>
       <h1 class="daughter-page-h1 center-container">Перфораторы</h1>
       <div class="catalog-and-options center-container">
         <section class="catalog-filters left-container">
           <h2>Фильтр:</h2>
-          <form action="https://echo.htmlacademy.ru" method="post" oninput="min.value=minrange.value; max.value=maxrange.value">
+          <form action="https://echo.htmlacademy.ru" method="post" oninput="min.value=minrange.value; max.value=maxrange.value;">
             <fieldset class="filter-cost">
               <legend>Цена:</legend>
-              <input type="range" min="0" max="30000" name="minrange" step="100" value="0">
-              <input type="range" min="0" max="30000" name="maxrange" step="100" value="30000">
+              <div class="catalog-filters-range-control">
+                <input type="range" class="minrange" min="0" max="30000" name="minrange" step="100" value="0" oninput="if(parseInt(minrange.value) > parseInt(maxrange.value)) maxrange.value=minrange.value;">
+                <input type="range" class="maxrange" min="0" max="30000" name="maxrange" step="100" value="30000" oninput="if(parseInt(maxrange.value) < parseInt(minrange.value)) minrange.value=maxrange.value;">
+              </div>
               <output name="min">0</output>
               <span>-</span>
               <output name="max">30000</output>
@@ -119,7 +124,7 @@
                 <div class="catalog-item">
                   <img src="img/bosh_3000.png" alt="BOSCH BFG 3000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 3000</a>
-                  <del class="catalog-item-old-price">22500  Р.</del>
+                  <del class="catalog-item-old-price">22500 Р.</del>
                   <span class="catalog-item-cost">15500 Р.</span>
                   <div class="catalog-item-buttons">
                     <a href="#" class="catalog-item-button-buy">Купить</a>
@@ -131,7 +136,7 @@
                 <div class="catalog-item">
                   <img src="img/bosh_6000.png" alt="BOSCH BFG 6000" width="218" height="170">
                   <a href="#" class="popular catalog-item-go-to-card">Перфоратор BOSCH BFG 6000</a>
-                  <del class="catalog-item-old-price">30500  Р.</del>
+                  <del class="catalog-item-old-price">30500 Р.</del>
                   <span class="catalog-item-cost">25500 Р.</span>
                   <div class="catalog-item-buttons">
                     <a href="#" class="catalog-item-button-buy">Купить</a>
@@ -155,7 +160,7 @@
                 <div class="catalog-item">
                   <img src="img/bosh_3000.png" alt="BOSCH BFG 3000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 3000</a>
-                  <del class="catalog-item-old-price">22500  Р.</del>
+                  <del class="catalog-item-old-price">22500 Р.</del>
                   <span class="catalog-item-cost">15500 Р.</span>
                   <div class="catalog-item-buttons">
                     <a href="#" class="catalog-item-button-buy">Купить</a>
@@ -164,10 +169,10 @@
                 </div>
               </li>
               <li>
-                <div class="catalog-item  new">
+                <div class="catalog-item new">
                   <img src="img/bosh_6000.png" alt="BOSCH BFG 6000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 6000</a>
-                  <del class="catalog-item-old-price">30500  Р.</del>
+                  <del class="catalog-item-old-price">30500 Р.</del>
                   <span class="catalog-item-cost">25500 Р.</span>
                   <div class="catalog-item-buttons">
                     <a href="#" class="catalog-item-button-buy">Купить</a>
@@ -191,7 +196,7 @@
                 <div class="catalog-item new">
                   <img src="img/bosh_3000.png" alt="BOSCH BFG 3000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 3000</a>
-                  <del class="catalog-item-old-price">22500  Р.</del>
+                  <del class="catalog-item-old-price">22500 Р.</del>
                   <span class="catalog-item-cost">15500 Р.</span>
                   <div class="catalog-item-buttons">
                     <a href="#" class="catalog-item-button-buy">Купить</a>
@@ -203,7 +208,7 @@
                 <div class="catalog-item">
                   <img src="img/bosh_6000.png" alt="BOSCH BFG 6000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 6000</a>
-                  <del class="catalog-item-old-price">30500  Р.</del>
+                  <del class="catalog-item-old-price">30500 Р.</del>
                   <span class="catalog-item-cost">25500 Р.</span>
                   <div class="catalog-item-buttons">
                     <a href="#" class="catalog-item-button-buy">Купить</a>
@@ -322,7 +327,7 @@
         </div>
       </section>
     </footer>
-    <section class="item-added  visually-hidden">
+    <section class="item-added visually-hidden">
       <h2>Товар добавлен в корзину</h2>
       <button type="button" name="continue-buy-button" class="continue-buy">Продолжить покупки</button>
       <button type="button" name="close-button" class="close-window">Закрыть окно</button>

@@ -53,9 +53,25 @@ img{
   background-color: #ba2732;
 }
 
+.new{
+  position: relative;
+}
+
+.new::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 59px;
+  background-color: transparent;
+  background-image: url('../img/new_item_flag.png');
+  z-index: 100;
+}
+
 .index-body,
 .catalog-body{
-  min-width: 1200px;
+  min-width: 950px;
   margin:0;
   padding:0;
 
@@ -77,7 +93,6 @@ a{
   margin: 0 auto;
   padding: 0 0;
 }
-
 
 .index-header,
 .header-for-all{
@@ -300,7 +315,6 @@ header .logo{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-right: 69px;
   padding-top: 45px;
   font-size: 14px;
   line-height: 24px;
@@ -340,7 +354,9 @@ header .logo{
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-top: 45px;
+  /* Сделано через left для единообразия header в личном кабинете/разлогинен */
+  margin-left: 69px;
+  margin-top: 45px;
   list-style: none;
 }
 
@@ -392,7 +408,18 @@ header .logo{
   opacity: 0.3;
 }
 
-.profile{
+.user{
+  dispaly: flex;
+  flex-wrap: wrap;
+
+  margin-top: 48px;
+  margin-left: 48px;
+}
+
+.user-cabinet{
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -400,30 +427,87 @@ header .logo{
   background-color: white;
 }
 
-.profile:hover,
-.profile:focus{
-  color: #000000;
 
+.user-cabinet-name{
+  display: block;
+  padding: 10px 29px 10px 47px;
+  color: #000000;
+}
+
+.user-cabinet-name::before{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 20px;
+  height: 18px;
+  background-image: url("../img/icon-user.svg");
+  opacity: 0.3;
+}
+
+.user-cabinet-name:hover,
+.user-cabinet-name:focus{
+  color: #000000;
   background-color: white;
 }
 
-.profile:active{
-  color: rgba(0, 0, 0, 0.3);
+.user-cabinet-name:active{
+  opacity: 0.3;
+  /* color: rgba(0, 0, 0, 0.3); */
+}
+
+.user-cabinet-logout{
+  display: block;
+  width: 39px;
+  height: 37px;
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.3;
+  font-size: 0;
+}
+
+.user-cabinet-logout:hover,
+.user-cabinet-logout:focus{
+  opacity:1;
+}
+
+.user-cabinet-logout:active{
+  opacity:0.3;
 }
 
 .cabinet-button{
+  display: inline-block;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
   color: #32425c;
 }
 
-.cabinet-button a:hover,
-.cabinet-button a:focus{
+.cabinet-button.order{
+  position:relative;
+  margin-left: 19px;
+  margin-right: 28px;
+}
+
+.cabinet-button.order::after{
+  content:"";
+  position: absolute;
+  top: 7px;
+  right: -20px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #32425c;
+}
+
+
+.cabinet-button:hover,
+.cabinet-button:focus{
   color: #ee3643;
 }
 
-.cabinet-button a:active{
+.cabinet-button:active{
   color: rgba(50, 66, 92, 0.3);
 }
 
@@ -745,38 +829,56 @@ header .logo{
   display: flex;
   justify-content: flex-start;
 
-  /* TODO: убрать 1 строку */
-  min-height: 59px;
 
 }
 
 .bread-crumbs-item{
+  display: inline-block;
+  position: relative;
+  margin: 20px 41px 20px 0;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
   color: #000000;
+}
+
+.home.bread-crumbs-item{
+  margin-left: -2px;
+  margin-top: 22px;
+  font-size: 0;
+  width: 14px;
+  height: 12px;
+  background-image: url("../img/icon-home.svg");
+}
+
+.bread-crumbs-item:not(:last-child):after{
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -27px;
+  width: 8px;
+  height: 12px;
+  background-image: url("../img/icon-right-small.svg");
+
 }
 
 .daughter-page-h1{
   margin-top: 0;
   margin-bottom: 20px;
-
-  /* TODO: убрать 1 строку */
-  min-height: 89px;
+  padding: 29px 0 31px 28px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   font-weight: normal;
   line-height: 30px;
+  text-transform: uppercase;
   color: #32425c;
 
   background-color: #f2f6f8;
 }
 
-.bread-crumbs a{
-  margin: 0;
-  margin-right: 15px;
-}
 
 .sorting-catalog{
   font-size: 13px;
@@ -798,9 +900,89 @@ header .logo{
   flex-basis: 220px;
   align-self: flex-start;
 
-  /* display: flex;
+  margin-right: 20px;
+
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start; */
+  justify-content: flex-start;
+}
+
+.catalog-filters h2{
+  padding: 10px 0 10px 17px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #f7f3ec;
+}
+
+.catalog-filters{
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.catalog-filters fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.catalog-filters legend{
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.catalog-filters-range-control{
+  position: relative;
+  background-color: #f7f3ec;
+  width: 220px;
+  height: 80px;
+}
+
+.minrange,
+.maxrange{
+  position: absolute;
+  width: 162px;
+  top: 30px;
+  outline: transparent;
+}
+
+.minrange{
+  left: 20px;
+}
+
+.maxrange{
+  right: 20px;
+}
+
+.filter-manufacturer label,
+.filter-by-power-type label{
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filter-manufacturer label:disabled,
+.filter-by-power-type label:disabled{
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0.4;
+}
+
+.catalog-filters button[type="submit"]{
+  border: 1px solid #e5e5e5;
+
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
 }
 
 .catalog-and-options .right-container{
@@ -838,50 +1020,6 @@ header .logo{
 
 .sorting-catalog a:active{
   color: rgb(238, 54, 67);
-}
-
-.catalog-filters{
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.catalog-filters h2{
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #000000;
-
-  background-color: #f7f3ec;
-}
-
-.catalog-filters legend{
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 18px;
-}
-
-.filter-manufacturer label,
-.filter-by-power-type label{
-  font-size: 15px;
-  line-height: 20px;
-}
-
-.filter-manufacturer label:disabled,
-.filter-by-power-type label:disabled{
-  color: rgba(0, 0, 0, 0.4);
-  opacity: 0.4;
-}
-
-.catalog-filters button[type="submit"]{
-  border: 1px solid #e5e5e5;
-
-  font-size: 13px;
-  line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
-
-  background-color: #ffffff;
 }
 
 /*Стили страницы Каталог окончание*/
@@ -955,18 +1093,6 @@ header .logo{
 
   font: inherit;
 }
-
-.catalog-item.new::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 59px;
-  background-color: transparent;
-  background-image: url('../img/new_item_flag.png');
-}
-
 
 .popular.catalog-items li:nth-child(4n) .catalog-item{
   margin-right: 0px;
@@ -1305,22 +1431,22 @@ header .logo{
 }
 
 .services-delivery{
-    display: none;
-    flex-grow: 1;
-    background:transparent url("../img/delivery.png") 100% 100% no-repeat;
+  display: none;
+  flex-grow: 1;
+  background:transparent url("../img/delivery.png") 100% 100% no-repeat;
 }
 .services-delivery.actived{
   display:block;
 }
 
 .services-delivery-description{
-  width:  275px;
+  width: 275px;
 }
 
 .services-guaranty{
-    display: none;
-    flex-grow: 1;
-    background:transparent url("../img/guaranty.png") 100% 100% no-repeat;
+  display: none;
+  flex-grow: 1;
+  background:transparent url("../img/guaranty.png") 100% 100% no-repeat;
 }
 
 .services-guaranty.actived{
@@ -1328,13 +1454,13 @@ header .logo{
 }
 
 .services-guaranty-description{
-  width:  379px;
+  width: 379px;
 }
 
 .services-credit{
-    display: none;
-    flex-grow: 1;
-    background:transparent url("../img/credit.png") 100% 100% no-repeat;
+  display: none;
+  flex-grow: 1;
+  background:transparent url("../img/credit.png") 100% 100% no-repeat;
 }
 
 .services-credit.actived{
@@ -1342,7 +1468,7 @@ header .logo{
 }
 
 .services-credit-description{
-  width:  379px;
+  width: 379px;
   margin-bottom: 31px;
 }
 
@@ -1419,7 +1545,7 @@ header .logo{
   display: block;
   width: 25px;
   height: 2px;
-  background-color:  #ee3643;
+  background-color: #ee3643;
 
 }
 
@@ -1515,7 +1641,7 @@ footer .logo{
 }
 
 .footer-nav{
-    flex-grow: 1;
+  flex-grow: 1;
 }
 .footer-nav ul{
   display:flex;
@@ -1581,8 +1707,8 @@ footer .logo{
 }
 
 .different-links p{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .different-links .patent{

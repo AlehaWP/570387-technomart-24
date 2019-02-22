@@ -64,48 +64,50 @@
         <section class="catalog-filters left-container">
           <h2>Фильтр:</h2>
           <form action="https://echo.htmlacademy.ru" method="post" oninput="min.value=minrange.value; max.value=maxrange.value;">
-            <fieldset class="filter-cost">
+            <fieldset class="catalog-filters-cost">
               <legend>Цена:</legend>
               <div class="catalog-filters-range-control">
                 <input type="range" class="minrange" min="0" max="30000" name="minrange" step="100" value="0" oninput="if(parseInt(minrange.value) > parseInt(maxrange.value)) maxrange.value=minrange.value;">
                 <input type="range" class="maxrange" min="0" max="30000" name="maxrange" step="100" value="30000" oninput="if(parseInt(maxrange.value) < parseInt(minrange.value)) minrange.value=maxrange.value;">
               </div>
-              <output name="min">0</output>
-              <span>-</span>
-              <output name="max">30000</output>
+              <div class="catalog-filters-output-fields">
+                <output name="min">0</output>
+                <span>—</span>
+                <output name="max">30000</output>
+              </div>
             </fieldset>
-            <fieldset class="filter-manufacturer">
+            <fieldset class="catalog-filters-manufacturer">
               <legend>Производители:</legend>
               <ul>
                 <li>
-                  <label><input type="checkbox" value="bosсh" name="manufacturer">Bosch</label>
+                  <input type="checkbox" value="bosсh" name="manufacturer" id="chk-bosh" disabled hidden><label for="chk-bosh">Bosch</label>
                 </li>
                 <li>
-                  <label><input type="checkbox" value="interscol" name="manufacturer">Интерскол</label>
+                  <input type="checkbox" value="interscol" name="manufacturer" id="chk-interscol" hidden><label for="chk-interscol">Интерскол</label>
                 </li>
                 <li>
-                  <label><input type="checkbox" value="makita" name="manufacturer">Makita</label>
+                  <input type="checkbox" value="makita" name="manufacturer" id="chk-makita" hidden><label for="chk-makita">Makita</label>
                 </li>
                 <li>
-                  <label><input type="checkbox" value="dewalt" name="manufacturer">DeWalt</label>
+                  <input type="checkbox" value="dewalt" name="manufacturer" id="chk-dewalt" hidden><label for="chk-dewalt">DeWalt</label>
                 </li>
                 <li>
-                  <label><input type="checkbox" value="hitachi" name="manufacturer">Hitachi</label>
+                  <input type="checkbox" value="hitachi" name="manufacturer" id="chk-hitachi" hidden><label for="chk-hitachi">Hitachi</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-by-power-type">
+            <fieldset class="catalog-filters-by-power">
               <legend>Питание:</legend>
               <ul>
                 <li>
-                  <label><input type="radio" name="radio-power-type" value="battery" checked>Аккумуляторные</label>
+                  <input type="radio" name="radio-power-type" value="battery" checked hidden id="rb-battery"><label for="rb-battery">Аккумуляторные</label>
                 </li>
                 <li>
-                  <label><input type="radio" name="radio-power-type" value="network">Сетевые</label>
+                  <input type="radio" name="radio-power-type" value="network" hidden id="rb-network"><label for="rb-network">Сетевые</label>
                 </li>
               </ul>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button type="submit" class="catalog-filters-submit">Показать</button>
           </form>
         </section>
         <div class="right-container">

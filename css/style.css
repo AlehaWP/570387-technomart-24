@@ -885,6 +885,7 @@ header .logo{
   line-height: 18px;
   color: #000000;
 
+  border-radius: 2px;
   background-color: #f7f3ec;
 }
 
@@ -908,10 +909,10 @@ header .logo{
 }
 
 .catalog-filters h2{
-  padding: 10px 0 10px 17px;
+  padding: 9px 0 11px 18px;
   margin: 0;
-  margin-bottom: 20px;
-
+  margin-bottom: 16px;
+  border-radius: 2px;
   font-size: 13px;
   line-height: 18px;
   font-weight: normal;
@@ -926,12 +927,33 @@ header .logo{
   color: #000000;
 }
 
-.catalog-filters fieldset{
+.catalog-filters-cost,
+.catalog-filters-manufacturer,
+.catalog-filters-by-power{
   border: none;
   margin: 0;
   padding: 0;
   padding-top: 20px;
 }
+
+.catalog-filters-cost{
+  padding-bottom: 26px;
+}
+
+.catalog-filters-manufacturer{
+  padding-bottom: 20px;
+}
+
+.catalog-filters-by-power{
+    padding-bottom: 20px;
+    margin-bottom: 55px;
+}
+
+.catalog-filters form fieldset:not(:last-of-type){
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 22px;
+}
+
 
 .catalog-filters legend{
   font-size: 17px;
@@ -941,9 +963,12 @@ header .logo{
 
 .catalog-filters-range-control{
   position: relative;
+  border-radius: 2px;
   background-color: #f7f3ec;
+
   width: 220px;
   height: 80px;
+  margin-bottom: 7px;
 }
 
 .minrange,
@@ -962,19 +987,105 @@ header .logo{
   right: 20px;
 }
 
-.filter-manufacturer label,
-.filter-by-power-type label{
+.catalog-filters-output-fields{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.catalog-filters output{
+  border-radius: 2px;
+  background-color: #f7f3ec;
+  width: 95px;
+  height: 38px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.catalog-filters span{
+  margin: 0 8px;
+}
+
+
+.catalog-filters-manufacturer ul,
+.catalog-filters-by-power ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  list-style: none;
+}
+
+.catalog-filters-manufacturer li,
+.catalog-filters-by-power li{
+  width: 220px;
+  margin-bottom: 16px;
+  padding-left: 35px;
+}
+
+.catalog-filters-manufacturer li:last-child,
+.catalog-filters-by-power li:last-child{
+  margin-bottom: 0;
+}
+
+.catalog-filters-manufacturer label,
+.catalog-filters-by-power label{
+  cursor: pointer;
+  position: relative;
   font-size: 15px;
   line-height: 20px;
 }
 
-.filter-manufacturer label:disabled,
-.filter-by-power-type label:disabled{
-  color: rgba(0, 0, 0, 0.4);
-  opacity: 0.4;
+.catalog-filters-manufacturer label::before,
+.catalog-filters-by-power label::before{
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  top: 0;
+  left: -35px;
+  background-color: white;
+  background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
-.catalog-filters button[type="submit"]{
+.catalog-filters-manufacturer label::before{
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.catalog-filters-manufacturer input:checked+label::before{
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.catalog-filters-by-power label::before{
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+}
+
+.catalog-filters-by-power input:checked+label::before{
+  height: 25px;
+  background-image: url("../img/radio-on.svg");
+}
+
+.catalog-filters-manufacturer input:not(:disabled)+label:focus::before,
+.catalog-filters-manufacturer input:not(:disabled)+label:hover::before,
+.catalog-filters-by-power input:not(:disabled)+label:focus::before,
+.catalog-filters-by-power input:not(:disabled)+label:hover::before{
+  opacity: 0.5;
+}
+
+.catalog-filters-manufacturer input:disabled+label,
+.catalog-filters-by-power input:disabled+label{
+  opacity: 0.3;
+  cursor: default;
+}
+
+.catalog-filters-submit{
+  padding: 9px 39px;
+  border-radius: 3px;
   border: 1px solid #e5e5e5;
 
   font-size: 13px;
@@ -983,6 +1094,16 @@ header .logo{
   text-transform: uppercase;
 
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+.catalog-filters-submit:hover,
+.catalog-filters-submit:focus{
+  border-color: #bdc6ca;
+}
+
+.catalog-filters-submit:active{
+  border-color: #ee3643;
 }
 
 .catalog-and-options .right-container{

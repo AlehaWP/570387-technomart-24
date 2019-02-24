@@ -20,14 +20,14 @@
             <label for="search-text">Поиск по сайту, поле ввода</label>
           </form>
           <a href="#" class="button hello-search-buy-user-choiсe btn-bookmarks">Закладки: 0</a>
-          <a href="#" class="button hello-search-buy-user-choiсe btn-basket">Корзина: 0</a>
+          <a href="#" class="button hello-search-buy-user-choiсe btn-basket actived">Корзина: 10</a>
           <a href="#" class="button buy">Оформить заказ</a>
         </div>
       </div>
       <div class="headline center-container">
         <p class="banner">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="fast-contacts">
-          <a href="tel:88125550555" class="call-me">+7 (812) 555-05-55</a>
+          <a href="tel:+78125550555" class="call-me">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="user">
@@ -63,7 +63,7 @@
       <div class="catalog-and-options center-container">
         <section class="catalog-filters left-container">
           <h2>Фильтр:</h2>
-          <form action="https://echo.htmlacademy.ru" method="post" oninput="min.value=minrange.value; max.value=maxrange.value;">
+          <form action="https://echo.htmlacademy.ru" method="get" oninput="min.value=minrange.value; max.value=maxrange.value;">
             <fieldset class="catalog-filters-cost">
               <legend>Цена:</legend>
               <div class="catalog-filters-range-control">
@@ -80,19 +80,19 @@
               <legend>Производители:</legend>
               <ul>
                 <li>
-                  <input type="checkbox" value="bosсh" name="manufacturer" id="chk-bosh" disabled hidden><label for="chk-bosh">Bosch</label>
+                  <input type="checkbox" value="bosсh" name="manufacturer" id="chk-bosh" hidden><label for="chk-bosh" tabindex="0">Bosch</label>
                 </li>
                 <li>
-                  <input type="checkbox" value="interscol" name="manufacturer" id="chk-interscol" hidden><label for="chk-interscol">Интерскол</label>
+                  <input type="checkbox" value="interscol" name="manufacturer" id="chk-interscol" hidden><label for="chk-interscol" tabindex="0">Интерскол</label>
                 </li>
                 <li>
-                  <input type="checkbox" value="makita" name="manufacturer" id="chk-makita" hidden><label for="chk-makita">Makita</label>
+                  <input type="checkbox" value="makita" name="manufacturer" id="chk-makita" hidden><label for="chk-makita" tabindex="0">Makita</label>
                 </li>
                 <li>
-                  <input type="checkbox" value="dewalt" name="manufacturer" id="chk-dewalt" hidden><label for="chk-dewalt">DeWalt</label>
+                  <input type="checkbox" value="dewalt" name="manufacturer" id="chk-dewalt" hidden><label for="chk-dewalt" tabindex="0">DeWalt</label>
                 </li>
                 <li>
-                  <input type="checkbox" value="hitachi" name="manufacturer" id="chk-hitachi" hidden><label for="chk-hitachi">Hitachi</label>
+                  <input type="checkbox" value="hitachi" name="manufacturer" id="chk-hitachi" hidden><label for="chk-hitachi" tabindex="0">Hitachi</label>
                 </li>
               </ul>
             </fieldset>
@@ -100,10 +100,10 @@
               <legend>Питание:</legend>
               <ul>
                 <li>
-                  <input type="radio" name="radio-power-type" value="battery" checked hidden id="rb-battery"><label for="rb-battery">Аккумуляторные</label>
+                  <input type="radio" name="radio-power-type" value="battery" checked hidden id="rb-battery"><label for="rb-battery" tabindex="0">Аккумуляторные</label>
                 </li>
                 <li>
-                  <input type="radio" name="radio-power-type" value="network" hidden id="rb-network"><label for="rb-network">Сетевые</label>
+                  <input type="radio" name="radio-power-type" value="network" hidden id="rb-network"><label for="rb-network" tabindex="0">Сетевые</label>
                 </li>
               </ul>
             </fieldset>
@@ -113,11 +113,11 @@
         <div class="right-container">
           <section class="sorting-catalog">
             <h2>Сортировка:</h2>
-            <a href="" class="sorting-catalog-sort-buttons">По цене</a>
-            <a href="" class="sorting-catalog-sort-buttons">По типу</a>
+            <a href="" class="sorting-catalog-sort-buttons by-cost checked">По цене</a>
+            <a href="" class="sorting-catalog-sort-buttons by-type">По типу</a>
             <a href="" class="sorting-catalog-sort-buttons">По функционалу</a>
-            <a href="" class="sorting-catalog-sort-direction">Вверх</a>
-            <a href="" class="sorting-catalog-sort-direction">Вниз</a>
+            <a href="" class="sorting-catalog-sort-direction asc checked">Вверх</a>
+            <a href="" class="sorting-catalog-sort-direction desc">Вниз</a>
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Каталог перфораторов</h2>
@@ -147,7 +147,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog-item new">
+                <div class="catalog-item new last-in-string">
                   <img src="img/bosh_3000.png" alt="BOSCH BFG 2000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 2000</a>
                   <del class="catalog-item-old-price"></del>
@@ -183,7 +183,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog-item">
+                <div class="catalog-item last-in-string">
                   <img src="img/bosh_3000.png" alt="BOSCH BFG 2000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 2000</a>
                   <del class="catalog-item-old-price"></del>
@@ -219,7 +219,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog-item">
+                <div class="catalog-item last-in-string">
                   <img src="img/bosh_3000.png" alt="BOSCH BFG 2000" width="218" height="170">
                   <a href="#" class="popular catalog-item-go-to-card">Перфоратор BOSCH BFG 2000</a>
                   <del class="catalog-item-old-price"></del>
@@ -232,7 +232,7 @@
               </li>
             </ul>
             <ul class="catalog-buttons-page">
-              <li><a href="" class="button-first">1</a></li>
+              <li><a href="" class="button-first checked">1</a></li>
               <li><a href="#" class="button-second">2</a></li>
               <li><a href="#" class="button-third">3</a></li>
               <li><a href="#" class="button-next">Следующая</a></li>
@@ -261,7 +261,7 @@
           <h2 class="visually-hidden">Наш адрес и навигация по сайту</h2>
           <div class="left-box">
             <a href="#" class="logo">
-              <img src="img/headerlogotechomart.svg" width="138" height="23" alt="Логотип компании Техномарт" class="logo-img">
+              <img src="img/footerlogo.svg" width="138" height="23" alt="Логотип компании Техномарт" class="logo-img">
             </a>
             <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             <a href="tel:88125550555" class="footer-call-me">+7 (812) 555-05-55</a>

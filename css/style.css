@@ -12,7 +12,7 @@ img{
 }
 
 /*сокрытие элементов которые должны быть видны для роботов и читалок*/
-.visually-hidden:not(:focus):not(:active){
+.visually-hidden:not(:active){
   position: absolute;
 
   width: 1px;
@@ -66,7 +66,15 @@ img{
   height: 59px;
   background-color: transparent;
   background-image: url('../img/new_item_flag.png');
-  z-index: 100;
+  z-index: 1;
+}
+
+.last-in-string{
+  margin-right: 0px;
+}
+
+.last-in-vertical-string{
+  margin-right: 0px;
 }
 
 .index-body,
@@ -91,7 +99,7 @@ a{
 .center-container {
   width: 940px;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 0;
 }
 
 .index-header,
@@ -108,7 +116,7 @@ a{
 }
 
 .index-header{
-  margin-bottom: 59px;
+  margin-bottom: 58px;
 }
 
 .catalog-header{
@@ -143,7 +151,7 @@ a{
 }
 
 header .logo{
-  flex-basis: 220px;
+  width: 220px;
   padding: 13px 55px 11px 55px;
   margin-bottom: -5px;
 }
@@ -159,7 +167,7 @@ header .logo{
 
 .search{
   position: relative;
-  flex-basis: 270px;
+  width: 270px;
 }
 
 .search label{
@@ -216,7 +224,7 @@ header .logo{
 .button.buy{
   position: relative;
   padding: 12px 0 12px 0px;
-  flex-basis: 150px;
+  width: 150px;
 }
 
 .hello-search-buy-user-choiсe.btn-bookmarks{
@@ -245,6 +253,11 @@ header .logo{
 
 .hello-search-buy-user-choiсe.btn-basket{
   padding-left: 50px;
+}
+
+.hello-search-buy-user-choiсe.actived{
+  color: #ffffff;
+  background-color: #ee3643;
 }
 
 .hello-search-buy-user-choiсe:hover,
@@ -296,7 +309,7 @@ header .logo{
 }
 
 .banner{
-  flex-basis: 200px;
+  width: 200px;
   margin: 0;
   margin-right: 67px;
   padding: 0;
@@ -355,8 +368,9 @@ header .logo{
   margin: 0;
   padding: 0;
   /* Сделано через left для единообразия header в личном кабинете/разлогинен */
-  margin-left: 69px;
+  margin-left: auto;
   margin-top: 45px;
+
   list-style: none;
 }
 
@@ -413,7 +427,8 @@ header .logo{
   flex-wrap: wrap;
 
   margin-top: 48px;
-  margin-left: 48px;
+  margin-left: auto;
+  /* margin-left: 47px; */
 }
 
 .user-cabinet{
@@ -571,6 +586,7 @@ header .logo{
   margin: 0;
   padding: 0;
   display:flex;
+  flex-wrap: wrap;
   width: 100%;
   margin:0;
   margin-bottom: 20px;
@@ -598,28 +614,33 @@ header .logo{
   color: #ffffff;
 
   background-color: #ffbf47;
-  background-position: 83% 50%;
   background-repeat: no-repeat;
 }
 
 .materials{
   background-image: url("../img/material.svg");
+  background-position: 83% 52%;
 }
 
 .tools{
   background-image: url("../img/tools.svg");
+  background-position: 87% 52%;
 }
 
 .technique{
   background-image: url("../img/technique.svg");
+  background-position: 85% 50%;
+
 }
 
 .sale{
   background-image: url("../img/sale.svg");
+  background-position: 81% 50%;
 }
 
 .delivery{
   background-image: url("../img/offersdelivery.svg");
+  background-position: 85% 52%;
 }
 
 .our-offers-card p{
@@ -628,7 +649,11 @@ header .logo{
   padding:0;
   padding-top: 21px;
   padding-left: 22px;
+  padding-right: 120px;
 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .our-offers-card a{
@@ -638,11 +663,16 @@ header .logo{
   width: 135px;
   height: 38px;
   margin-left: 25px;
-  padding-top: 8px;
+
+  padding-top: 11px;
 
   text-align: center;
 
   border-radius: 2px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   /* padding: 11px 27px 9px 20px; */
 }
 
@@ -650,7 +680,7 @@ header .logo{
   margin-right: 20px;
 }
 
-.our-offers-what-we-sell li:last-child .our-offers-card{
+.our-offers-what-we-sell .last-in-string{
   margin-right: 0;
 }
 
@@ -658,7 +688,7 @@ header .logo{
   margin-bottom: 20px;
 }
 
-.our-offers-privileges li:last-child .our-offers-card{
+.our-offers-privileges .last-in-vertical-string{
   margin-bottom: 0;
 }
 
@@ -716,9 +746,12 @@ header .logo{
 
 .our-offers-slider-headline,
 .our-offers-slider-tagline{
-    padding: 0;
     margin: 0;
     margin-left: 25px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .our-offers-slider-headline{
@@ -749,7 +782,7 @@ header .logo{
 
   border: 2px solid white;
   border-radius: 50%;
-  outline: transparent;
+  /* outline: transparent; */
   background-color: white;
   cursor: pointer;
 }
@@ -757,16 +790,40 @@ header .logo{
 .our-offers-slider-btn button:active,
 .our-offers-slider-btn button.actived{
   background-color: #ee3643;
-  outline: transparent;
+  /* outline: transparent; */
 }
 
 .our-offers-slider-arrows{
   position: absolute;
   display: flex;
   justify-content: space-between;
-  margin-left: 4%;
+  left: 4%;
   top: 43%;
   width: 94%;
+}
+
+.our-offers-slider-left,
+.our-offers-slider-right{
+  width:30px;
+  height:40px;
+  border:none;
+  background-color: transparent;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+.our-offers-slider-right{
+  background-image: url("../img/icon-right.svg");
+}
+
+.our-offers-slider-arrows button:hover,
+.our-offers-slider-arrows button:focus{
+  cursor: pointer;
+}
+
+.our-offers-slider-arrows button:active{
+  cursor: pointer;
 }
 
 .our-offers-slider-drills,
@@ -799,21 +856,6 @@ header .logo{
 
 }
 
-.our-offers-slider-left,
-.our-offers-slider-right{
-  width:30px;
-  height:50px;
-  border:none;
-  background-color: rgba(0, 0, 0, 0);
-  background-image: url("../img/icon-left.svg");
-  background-repeat: no-repeat;
-  font-size: 0;
-}
-
-.our-offers-slider-right{
-  background-image: url("../img/icon-right.svg");
-}
-
 .offers-slider-btn-perforators,
 .offers-slider-btn-drills{
   background-color: #ffffff;
@@ -828,12 +870,11 @@ header .logo{
 .bread-crumbs{
   display: flex;
   justify-content: flex-start;
-
-
 }
 
 .bread-crumbs-item{
   display: inline-block;
+  vertical-align: baseline;
   position: relative;
   margin: 20px 41px 20px 0;
 
@@ -867,7 +908,7 @@ header .logo{
 .daughter-page-h1{
   margin-top: 0;
   margin-bottom: 20px;
-  padding: 29px 0 31px 28px;
+  padding: 29px 0 30px 28px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
@@ -877,16 +918,6 @@ header .logo{
   color: #32425c;
 
   background-color: #f2f6f8;
-}
-
-
-.sorting-catalog{
-  font-size: 13px;
-  line-height: 18px;
-  color: #000000;
-
-  border-radius: 2px;
-  background-color: #f7f3ec;
 }
 
 .catalog-and-options{
@@ -911,7 +942,7 @@ header .logo{
 .catalog-filters h2{
   padding: 9px 0 11px 18px;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
   border-radius: 2px;
   font-size: 13px;
   line-height: 18px;
@@ -949,7 +980,7 @@ header .logo{
     margin-bottom: 55px;
 }
 
-.catalog-filters form fieldset:not(:last-of-type){
+.catalog-filters fieldset:not(:last-of-type){
   border-bottom: 1px solid lightgray;
   margin-bottom: 22px;
 }
@@ -976,7 +1007,7 @@ header .logo{
   position: absolute;
   width: 162px;
   top: 30px;
-  outline: transparent;
+  /* outline: transparent; */
 }
 
 .minrange{
@@ -1037,6 +1068,7 @@ header .logo{
   position: relative;
   font-size: 15px;
   line-height: 20px;
+  user-select: none;
 }
 
 .catalog-filters-manufacturer label::before,
@@ -1114,7 +1146,25 @@ header .logo{
   flex-direction: column;
 }
 
+.sorting-catalog{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 11px 0 9px 18px;
+  margin: 0;
+  margin-bottom: 19px;
+
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
+  border-radius: 2px;
+  background-color: #f7f3ec;
+}
+
 .sorting-catalog h2{
+  padding: 0;
+  margin: 0;
+  margin-right: 139px;
   font-size: inherit;
   font-weight: normal;
   line-height: inherit;
@@ -1123,6 +1173,7 @@ header .logo{
 }
 
 .sorting-catalog a{
+  margin-right: auto;
   font-size: 13px;
   line-height: 18px;
   text-decoration: underline;
@@ -1130,6 +1181,59 @@ header .logo{
   text-decoration-color: #ee3643;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.18);
+}
+
+.sorting-catalog .by-cost{
+  margin-right: 71px;
+}
+
+.sorting-catalog .by-type{
+  margin-right: 65px;
+}
+
+.sorting-catalog a.checked{
+  color: #ee3643;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.sorting-catalog .asc,
+.sorting-catalog .desc{
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  margin-top: 3px;
+  background-color: transparent;
+  font-size: 0;
+  opacity: 0.18;
+}
+
+.sorting-catalog .asc{
+  background-image: url("../img/icon-up-dir.svg");
+}
+
+.sorting-catalog .asc.checked{
+  background-image: url("../img/icon-up-dir-checked.svg");
+  margin-right: 23px;
+}
+
+
+.sorting-catalog .desc{
+  background-image: url("../img/icon-down-dir.svg");
+  margin-right: 14px;
+}
+
+.sorting-catalog .desc.checked{
+  background-image: url("../img/icon-down-dir-checked.svg");
+}
+
+.sorting-catalog .desc.checked,
+.sorting-catalog .asc.checked,
+.sorting-catalog .desc:hover,
+.sorting-catalog .asc:hover,
+.sorting-catalog .desc:focus,
+.sorting-catalog .asc:focus{
+  opacity: 1;
 }
 
 .sorting-catalog a:hover,
@@ -1140,7 +1244,7 @@ header .logo{
 }
 
 .sorting-catalog a:active{
-  color: rgb(238, 54, 67);
+  color: #ee3643;
 }
 
 /*Стили страницы Каталог окончание*/
@@ -1150,9 +1254,10 @@ header .logo{
 .popular-fabricator-header{
   display:flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
+  padding-left: 28px;
   margin-bottom: 20px;
 
   font-family: "Cuprum", Arial, sans-serif;
@@ -1165,9 +1270,7 @@ header .logo{
 .popular-fabricator-header h2{
   padding:0;
   margin: 0;
-  padding-bottom: 3px;
   margin-right: auto;
-  margin-left: 29px;
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
@@ -1181,7 +1284,7 @@ header .logo{
 }
 
 .popular-fabricator-header .red-button{
-  padding-left: 68px;
+  padding-left: 70px;
   padding-right: 68px;
 }
 
@@ -1205,7 +1308,7 @@ header .logo{
 .catalog-item{
   position: relative;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   display: flex;
   flex-direction: column;
   width:220px;
@@ -1215,20 +1318,16 @@ header .logo{
   font: inherit;
 }
 
-.popular.catalog-items li:nth-child(4n) .catalog-item{
-  margin-right: 0px;
-}
-
-.catalog-list li:nth-child(3n) .catalog-item{
-  margin-right: 0px;
+.catalog-items .last-in-string{
+  margin-right: 0;
 }
 
 .catalog-list{
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .catalog-item img{
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .catalog-item-go-to-card{
@@ -1236,34 +1335,38 @@ header .logo{
   padding: 0;
   margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 12px;
   text-align: center;
   text-decoration:none;
   font-size: 18px;
   line-height: 20px;
+  overflow: hidden;
 
   color: inherit;
 }
 
-
-
-
 .catalog-item-old-price{
+  margin-top: 12px;
+  margin-bottom: 10px;
   text-align: center;
   color:#a9a9a9;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .catalog-item-cost{
   position: relative;
   margin-top:auto;
   margin-right: 53px;
-  margin-bottom: 21px;
-  margin-left: 43px;
-  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 42px;
+  padding: 10px 0px;
   padding-right: 0;
-  padding-left: 17px;
+  padding-left: 16px;
   border-radius: 3px;
   color: #ffffff;
+  white-space: nowrap;
   background-color: #ee3643;
 }
 
@@ -1271,7 +1374,7 @@ header .logo{
   content: "";
   position: absolute;
   top: 0px;
-  right: -36px;
+  right: -37px;
   border: 19px solid transparent;
   border-left-color: #ee3643;
 }
@@ -1351,20 +1454,29 @@ header .logo{
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 294px;
   list-style: none;
 }
 
 .catalog-buttons-page a{
   display: inline-block;
-  padding: 10px 14px 9px 14px;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 10px 15px 9px 14px;
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
 
   font-size: 13px;
   line-height: 18px;
   text-align: center;
   color:#000000;
+}
+
+.catalog-buttons-page .button-next{
+  padding-left: 30px;
+  padding-right: 30px;
+  text-transform: uppercase;
 }
 
 .catalog-buttons-page a:hover,
@@ -1392,7 +1504,10 @@ header .logo{
   padding: 0;
 
   list-style: none;
+}
 
+.fabricators-list .last-in-string{
+  margin-right: 0;
 }
 
 .fabricators-list li{
@@ -1402,32 +1517,28 @@ header .logo{
   margin-bottom: 20px;
 }
 
-.fabricators-list li:nth-child(4n){
-  margin-right: 0;
-}
-
 .fabricators-card{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 218px;
-  height: 145px;
+  height: 143px;
 }
 
 .fabricators-list li:hover,
 .fabricators-list li:focus{
-  border: none;
+  border-color: transparent;
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .fabricators-list li:active{
-  border: none;
+  border-color: transparent;
   opacity: 0.5;
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
 .services{
-  margin-bottom: 77px;
+  margin-bottom: 79px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1456,7 +1567,7 @@ header .logo{
 .about-product .center-container{
   display: flex;
   flex-direction: column;
-  padding-bottom: 68px;
+  padding-bottom: 69px;
 }
 
 .services h2,
@@ -1488,7 +1599,7 @@ header .logo{
 
 .services-prelude{
   margin: 0;
-  margin-bottom: 66px;
+  margin-bottom: 68px;
   width: 398px;
 }
 
@@ -1509,7 +1620,7 @@ header .logo{
   margin: 0;
   margin-right: 80px;
   /* Распорка для картинки */
-  margin-bottom: 100px;
+  margin-bottom: 98px;
   padding: 0;
   padding-top: 2px;
 
@@ -1530,8 +1641,7 @@ header .logo{
 
 .services-list-button{
   width: 100%;
-  padding: 16px 0;
-  padding-left: 23px;
+  padding: 15px 0 17px 23px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 21px;
@@ -1637,7 +1747,7 @@ header .logo{
 .about-us{
   display: flex;
   flex-direction: column;
-  flex-basis: 519px;
+  width: 519px;
   flex-shrink: 0;
   margin-right: 121px;
 }
@@ -1671,8 +1781,8 @@ header .logo{
 .about-us-transport-companies{
   margin: 0;
   padding: 0;
-  margin-top: -2px;
-  margin-bottom: 15px;
+  margin-top: -3px;
+  margin-bottom: 17px;
   padding-left: 36px;
   list-style: none;
 
@@ -1686,7 +1796,7 @@ header .logo{
   content: "";
   position: absolute;
   top: 10px;
-  left: -35px;
+  left: -36px;
   display: block;
   width: 25px;
   height: 2px;
@@ -1712,7 +1822,7 @@ header .logo{
 
 
 .contacts p{
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 .contacts-map{
   display: block;
@@ -1760,7 +1870,8 @@ footer .logo{
   align-self: flex-start;
 }
 
-.information .left-box address{
+
+.information address{
   padding-left: 3px;
   font-style: normal;
   color: #f1f5f7;

@@ -329,11 +329,32 @@
         </div>
       </section>
     </footer>
+    <!-- Модальные окна  -->
+    <section class="login-form modal modal-dialog">
+      <h2 class="visually-hidden">Войти в личный кабинет</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-header-decor"></div>
+        <button type="button" name="close-button" class="modal-close">Закрыть окно</button>
+        <div class="content-block modal-center-container">
+          <label>Ваше имя:<input type="text" name="user-name" placeholder="Имя:" required></label>
+        </div>
+        <div class="modal-footer">
+          <div class="modal-center-container">
+            <button type="submit" class="modal-submit red-button">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </section>
     <section class="item-added visually-hidden">
+      <div class="modal-header-decor"></div>
       <h2>Товар добавлен в корзину</h2>
       <button type="button" name="continue-buy-button" class="continue-buy">Продолжить покупки</button>
-      <button type="button" name="close-button" class="close-window">Закрыть окно</button>
-      <button type="button" name="close-button" class="close-button">Продолжить покупки</button>
+      <div class="modal-footer">
+        <div class="modal-center-container">
+          <button type="button" name="close-button" class="close-window">Закрыть окно</button>
+          <button type="button" name="close-button" class="close-button">Продолжить покупки</button>
+        </div>
+      </div>
     </section>
   </body>
 </html>

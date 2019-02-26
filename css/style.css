@@ -65,7 +65,7 @@ img{
   width: 60px;
   height: 59px;
   background-color: transparent;
-  background-image: url('../img/new_item_flag.png');
+  background-image: url("../img/new_item_flag.png");
   z-index: 1;
 }
 
@@ -199,7 +199,8 @@ header .logo{
 .search input::-webkit-input-placeholder {
    color: white;
 }
-.search input::-moz-placeholder {
+
+.search input::-moz-placeholder{
    color: white;
 }
 
@@ -398,7 +399,6 @@ header .logo{
   background: transparent;
   background-image: url("../img/icon-login.svg");
   opacity: 0.3;
-
 }
 
 .authorization .registration{
@@ -441,7 +441,6 @@ header .logo{
 
   background-color: white;
 }
-
 
 .user-cabinet-name{
   display: block;
@@ -516,7 +515,6 @@ header .logo{
   background-color: #32425c;
 }
 
-
 .cabinet-button:hover,
 .cabinet-button:focus{
   color: #ee3643;
@@ -554,8 +552,7 @@ header .logo{
 }
 
 .main-nav a:hover,
-.main-nav a:focus
-{
+.main-nav a:focus{
   color: #ffffff;
   background-color: #293449;
 }
@@ -580,7 +577,6 @@ header .logo{
   padding: 0;
   margin: 0;
 }
-
 
 .our-offers-what-we-sell{
   margin: 0;
@@ -630,7 +626,6 @@ header .logo{
 .technique{
   background-image: url("../img/technique.svg");
   background-position: 85% 50%;
-
 }
 
 .sale{
@@ -853,7 +848,6 @@ header .logo{
   display:flex;
   justify-content: space-between;
   flex-direction: column;
-
 }
 
 .offers-slider-btn-perforators,
@@ -985,7 +979,6 @@ header .logo{
   margin-bottom: 22px;
 }
 
-
 .catalog-filters legend{
   font-size: 17px;
   font-weight: bold;
@@ -1039,7 +1032,6 @@ header .logo{
 .catalog-filters span{
   margin: 0 8px;
 }
-
 
 .catalog-filters-manufacturer ul,
 .catalog-filters-by-power ul{
@@ -1217,7 +1209,6 @@ header .logo{
   margin-right: 23px;
 }
 
-
 .sorting-catalog .desc{
   background-image: url("../img/icon-down-dir.svg");
   margin-right: 14px;
@@ -1248,8 +1239,6 @@ header .logo{
 }
 
 /*Стили страницы Каталог окончание*/
-
-
 .popular-goods-header,
 .popular-fabricator-header{
   display:flex;
@@ -1303,7 +1292,6 @@ header .logo{
   text-align: center;
   color: #000000;
 }
-
 
 .catalog-item{
   position: relative;
@@ -1379,7 +1367,6 @@ header .logo{
   border-left-color: #ee3643;
 }
 
-
 .catalog-item-buttons{
   display: none;
   position: absolute;
@@ -1427,7 +1414,6 @@ header .logo{
   box-shadow: none;
   background-color: #518534;
 }
-
 
 .catalog-item-bookmarks{
   border: 3px solid #63a63e;
@@ -1625,7 +1611,6 @@ header .logo{
   padding-top: 2px;
 
   list-style: none;
-
 }
 
 .services-list-buttons::after{
@@ -1636,7 +1621,6 @@ header .logo{
   top: -48px;
   right: 0;
   background-image: url("../img/layer-services-buttons.png");
-
 }
 
 .services-list-button{
@@ -1690,6 +1674,7 @@ header .logo{
   flex-grow: 1;
   background:transparent url("../img/delivery.png") 100% 100% no-repeat;
 }
+
 .services-delivery.actived{
   display:block;
 }
@@ -1785,7 +1770,6 @@ header .logo{
   margin-bottom: 17px;
   padding-left: 36px;
   list-style: none;
-
 }
 
 .about-us-transport-companies li{
@@ -1801,7 +1785,6 @@ header .logo{
   width: 25px;
   height: 2px;
   background-color: #ee3643;
-
 }
 
 .about-us li{
@@ -1820,15 +1803,14 @@ header .logo{
   margin-bottom: 0;   */
 }
 
-
 .contacts p{
   margin-bottom: 32px;
 }
+
 .contacts-map{
   display: block;
   margin-bottom: 20px;
 }
-
 
 .contacts .red-button{
   padding-left: 63px;
@@ -1860,6 +1842,7 @@ header .logo{
   display:flex;
   flex-direction: column;
 }
+
 .information .left-box{
   margin-right: 68px;
 }
@@ -1869,7 +1852,6 @@ footer .logo{
   padding: 20px 41px 19px 41px;
   align-self: flex-start;
 }
-
 
 .information address{
   padding-left: 3px;
@@ -1885,6 +1867,7 @@ footer .logo{
 .footer-nav{
   flex-grow: 1;
 }
+
 .footer-nav ul{
   display:flex;
   flex-wrap: wrap;
@@ -2020,15 +2003,39 @@ footer .logo{
 }
 
 /* модальные окна */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal{
   position: fixed;
-
+  display: none;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
   background-color: #ffffff;
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
   z-index: 10;
+}
+
+.modal-show{
+  display:block;
+
+  animation: bounce 0.6s;
 }
 
 .modal-dialog{
@@ -2131,23 +2138,21 @@ footer .logo{
   border: 2px solid #dee3e4;
   border-radius: 3px;
 }
+
 .modal-footer{
   width: 100%;
   background-color: #f4f4f4;
 }
 
 .send-question{
-  display: none;
   bottom: 202px;
 }
 
 .login-form{
-  display: none;
   top: 158px;
 }
 
 .item-added{
-  display: none;
   top: 158px;
 }
 
@@ -2223,7 +2228,6 @@ footer .logo{
 }
 
 .modal.big-map{
-  display: none;
   width: 940px;
   height: 446px;
   left: 50%;

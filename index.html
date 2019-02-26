@@ -251,7 +251,7 @@
              заехав в наш офис:
           </p>
           <a href="img/big_map.jpg" class="contacts-map"><span class="visually-hidden">Карта с адресом</span><img src="img/map.png" width="300" height="158" alt="Карта" class="contacts-map"></a>
-          <a href="#" class="red-button">Заблудились? Напишите нам</a>
+          <a href="question.html" class="send-question-form red-button">Заблудились? Напишите нам</a>
         </section>
       </div>
     </main>
@@ -378,5 +378,22 @@
       <button type="button" name="close-button" class="modal-close">Закрыть окно</button>
       <img src="img/big_map.jpg" width="940" height="447" alt="Увеличенная карта с указанием нашего расположения">
     </section>
+
+    <script>
+      var link = document.querySelector(".send-question-form");
+      var popup = document.querySelector(".send-question");
+      var close = popup.querySelector(".modal-close");
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+      });
+
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+      });
+    </script>
+
   </body>
 </html>

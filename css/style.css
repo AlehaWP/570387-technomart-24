@@ -2129,7 +2129,7 @@ footer .logo{
   border-radius: 3px;
 }
 
-.send-question textarea{
+.send-question-form textarea{
   width: 460px;
   height: 114px;
   margin-top: 11px;
@@ -2144,7 +2144,7 @@ footer .logo{
   background-color: #f4f4f4;
 }
 
-.send-question{
+.send-question-form{
   bottom: 202px;
 }
 
@@ -2217,7 +2217,7 @@ footer .logo{
   opacity: 0.7;
 }
 
-.send-question .modal-submit,
+.send-question-form .modal-submit,
 .login-form .modal-submit{
   width: 100%;
   margin-top: 37px;

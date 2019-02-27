@@ -16,7 +16,7 @@
             <input type="search" name="search" placeholder="Поиск:" id="search-text">
             <label for="search-text">Поиск по сайту, поле ввода</label>
           </form>
-          <a href="#" class="button hello-search-buy-user-choiсe btn-bookmarks">Закладки: 0</a>
+          <a href="#" class="button hello-search-buy-user-choiсe btn-bookmarks">Закладки: <span class="bookmarks-value">0</span></a>
           <a href="#" class="button hello-search-buy-user-choiсe btn-basket">Корзина: 0</a>
           <a href="#" class="button buy">Оформить заказ</a>
         </div>
@@ -28,7 +28,7 @@
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <ul class="authorization">
-          <li><a href="#" class="button login">Войти</a></li>
+          <li><a href="#" class="button login login-form-show">Войти</a></li>
           <li><a href="#" class="button registration">Регистрация</a></li>
         </ul>
       </div>
@@ -115,7 +115,7 @@
               <del class="catalog-item-old-price">32500 Р.</del>
               <span class="catalog-item-cost">25500 Р.</span>
               <div class="catalog-item-buttons">
-                <a href="#" class="catalog-item-button-buy">Купить</a>
+                <a href="#" class="catalog-item-button-buy item-added-modal-show">Купить</a>
                 <button type="button" name="catalog-item-bookmarks" class="catalog-item-bookmarks">в закладки</button>
               </div>
             </div>
@@ -127,7 +127,7 @@
               <del class="catalog-item-old-price">22500 Р.</del>
               <span class="catalog-item-cost">15500 Р.</span>
               <div class="catalog-item-buttons">
-                <a href="#" class="catalog-item-button-buy">Купить</a>
+                <a href="#" class="catalog-item-button-buy item-added-modal-show">Купить</a>
                 <button type="button" name="catalog-item-bookmarks" class="catalog-item-bookmarks">в закладки</button>
               </div>
             </div>
@@ -139,7 +139,7 @@
               <del class="catalog-item-old-price">30500 Р.</del>
               <span class="catalog-item-cost">25500 Р.</span>
               <div class="catalog-item-buttons">
-                <a href="#" class="catalog-item-button-buy">Купить</a>
+                <a href="#" class="catalog-item-button-buy item-added-modal-show">Купить</a>
                 <button type="button" name="catalog-item-bookmarks" class="catalog-item-bookmarks">в закладки</button>
               </div>
             </div>
@@ -151,7 +151,7 @@
               <del class="catalog-item-old-price"></del>
               <span class="catalog-item-cost">12500 Р.</span>
               <div class="catalog-item-buttons">
-                <a href="#" class="catalog-item-button-buy">Купить</a>
+                <a href="#" class="catalog-item-button-buy item-added-modal-show">Купить</a>
                 <button type="button" name="catalog-item-bookmarks" class="catalog-item-bookmarks">в закладки</button>
               </div>
             </div>
@@ -250,8 +250,8 @@
           <p>Вы можете забрать товар сами,
              заехав в наш офис:
           </p>
-          <a href="img/big_map.jpg" class="contacts-map"><span class="visually-hidden">Карта с адресом</span><img src="img/map.png" width="300" height="158" alt="Карта" class="contacts-map"></a>
-          <a href="question.html" class="send-question-form red-button">Заблудились? Напишите нам</a>
+          <a href="img/big_map.jpg" class="contacts-map big-map-show"><span class="visually-hidden">Карта с адресом</span><img src="img/map.png" width="300" height="158" alt="Карта" class="contacts-map"></a>
+          <a href="question.html" class="send-question-form-show red-button">Заблудились? Напишите нам</a>
         </section>
       </div>
     </main>
@@ -356,7 +356,7 @@
         </div>
       </div>
     </section>
-    <section class="send-question modal modal-dialog">
+    <section class="send-question-form modal modal-dialog">
       <h2 class="visually-hidden">Задать вопрос</h2>
       <button type="button" name="close-button" class="modal-close">Закрыть окно</button>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -380,19 +380,35 @@
     </section>
 
     <script>
-      var link = document.querySelector(".send-question-form");
-      var popup = document.querySelector(".send-question");
-      var close = popup.querySelector(".modal-close");
+      function modalShow(buttonName, formName){
+        var links = document.querySelectorAll(buttonName);
+        var popup = document.querySelector(formName);
+        var close = popup.querySelector(".modal-close");
 
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-      });
+        for (var i = 0; i < links.length; i++)  {
+          links[i].addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.add("modal-show");
+          });
+        }
 
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-      });
+        close.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.remove("modal-show");
+        });
+      };
+
+      if (localStorage.getItem("bookmarks")==null){localStorage.setItem("bookmarks", "0")};
+      localStorage["bookmarks"]=parseInt(localStorage["bookmarks"]) + 1;
+      var el = document.querySelector(".bookmarks-value");
+      el.textContent = localStorage["bookmarks"];
+
+
+      modalShow(".send-question-form-show", ".send-question-form");
+      modalShow(".big-map-show", ".big-map");
+      modalShow(".login-form-show", ".login-form");
+      modalShow(".item-added-modal-show", ".item-added");
+
     </script>
 
   </body>

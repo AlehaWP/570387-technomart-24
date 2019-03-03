@@ -171,10 +171,12 @@ header .logo{
 }
 
 .search label{
+  display: block;
   position: absolute;
   left: 17px;
   top: 12px;
   width: 17px;
+  height: 17px;
 
   font-size: 0;
   background: transparent;
@@ -196,11 +198,9 @@ header .logo{
   border:none;
 }
 
-.search input::-webkit-input-placeholder {
-   color: white;
-}
-
-.search input::-moz-placeholder{
+.search input::-webkit-input-placeholder,
+.search input::-moz-placeholder,
+.search input::placeholder{
    color: white;
 }
 
@@ -465,6 +465,11 @@ header .logo{
   background-color: white;
 }
 
+.user-cabinet-name:hover::before,
+.user-cabinet-name:focus::before{
+  opacity:1;
+}
+
 .user-cabinet-name:active{
   opacity: 0.3;
   /* color: rgba(0, 0, 0, 0.3); */
@@ -492,6 +497,7 @@ header .logo{
 
 .cabinet-button{
   display: inline-block;
+  vertical-align: middle;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
@@ -653,6 +659,7 @@ header .logo{
 
 .our-offers-card a{
   display: inline-block;
+  vertical-align: middle;
   /* padding: 0;
   margin: 0; */
   width: 135px;
@@ -827,12 +834,13 @@ header .logo{
   font-size: 18px;
   line-height: 24px;
   color:#ffffff;
-  background-image: url("../img/mandrill.png");
+  background-color: #F4A460;
+  background-image: url("../img/mandrill.jpg");
   background-repeat: no-repeat;
 }
 
 .our-offers-slider-perforators{
-  background-image: url("../img/manperforator.png");
+  background-image: url("../img/manperforator.jpg");
 }
 
 .our-offers-slider-headline{
@@ -868,7 +876,7 @@ header .logo{
 
 .bread-crumbs-item{
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
   position: relative;
   margin: 20px 41px 20px 0;
 
@@ -1192,6 +1200,7 @@ header .logo{
 .sorting-catalog .asc,
 .sorting-catalog .desc{
   display: inline-block;
+  vertical-align: middle;
   width: 11px;
   height: 10px;
   margin-top: 3px;
@@ -1519,7 +1528,7 @@ header .logo{
 
 .fabricators-list li:active{
   border-color: transparent;
-  opacity: 0.5;
+  opacity: 0.3;
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
@@ -1643,7 +1652,7 @@ header .logo{
 .services-list-button:hover,
 .services-list-button:focus{
   color: #ffffff;
-  outline-color: transparent;
+  /* outline-color: transparent; */
   background-color: #293449;
   box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
 }
@@ -1651,7 +1660,7 @@ header .logo{
 .services-list-button:active,
 .services-list-button.actived{
   color: #32425c;
-  outline-color: transparent;
+  /* outline-color: transparent; */
   background-color: #ffffff;
   box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
 }
@@ -1809,7 +1818,8 @@ header .logo{
 
 .contacts-map{
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .contacts .red-button{
@@ -2231,6 +2241,6 @@ footer .logo{
   width: 940px;
   height: 446px;
   left: 50%;
-  bottom: 437px;
+  bottom: 20%;
   margin-left: -470px;
 }

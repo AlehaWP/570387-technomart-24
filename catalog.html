@@ -18,7 +18,7 @@
             <input type="search" name="search" placeholder="Поиск:" id="search-text">
             <label for="search-text">Поиск по сайту, поле ввода</label>
           </form>
-          <a href="#" class="button hello-search-buy-user-choiсe btn-bookmarks">Закладки: 0</a>
+          <a href="#" class="button hello-search-buy-user-choiсe btn-bookmarks">Закладки: <span class="bookmarks-value">0</span></a>
           <a href="#" class="button hello-search-buy-user-choiсe btn-basket actived">Корзина: 10</a>
           <a href="#" class="button buy">Оформить заказ</a>
         </div>
@@ -62,17 +62,20 @@
       <div class="catalog-and-options center-container">
         <section class="catalog-filters left-container">
           <h2>Фильтр:</h2>
-          <form action="https://echo.htmlacademy.ru" method="get" oninput="min.value=minrange.value; max.value=maxrange.value;">
+          <form action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="catalog-filters-cost">
               <legend>Цена:</legend>
-              <div class="catalog-filters-range-control">
-                <input type="range" class="minrange" min="0" max="30000" name="minrange" step="100" value="0" oninput="if(parseInt(minrange.value) > parseInt(maxrange.value)) maxrange.value=minrange.value;">
-                <input type="range" class="maxrange" min="0" max="30000" name="maxrange" step="100" value="30000" oninput="if(parseInt(maxrange.value) < parseInt(minrange.value)) minrange.value=maxrange.value;">
+              <div class="catalog-filters-slider">
+                <div class="catalog-filters-slider-line">
+                  <div class="catalog-filters-slider-line-fill"></div>
+                </div>
+                <!-- <input type="range" class="minrange" min="0" max="30000" name="minrange" step="100" value="0" oninput="if(parseInt(minrange.value) > parseInt(maxrange.value)) maxrange.value=minrange.value;"> -->
+                <!-- <input type="range" class="maxrange" min="0" max="30000" name="maxrange" step="100" value="30000" oninput="if(parseInt(maxrange.value) < parseInt(minrange.value)) minrange.value=maxrange.value;"> -->
               </div>
-              <div class="catalog-filters-output-fields">
-                <output name="min">0</output>
+              <div class="catalog-filters-input-fields">
+                <input type="text" name="min" value="0"></input>
                 —
-                <output name="max">30000</output>
+                <input type="text" name="max" value="30000"></input>
               </div>
             </fieldset>
             <fieldset class="catalog-filters-manufacturer">
@@ -121,7 +124,7 @@
           <section class="catalog">
             <h2 class="visually-hidden">Каталог перфораторов</h2>
             <ul class="catalog-list catalog-items">
-              <li>
+              <li class="catalog-items-element">
                 <div class="catalog-item">
                   <img src="img/bosh_3000.jpg" alt="BOSCH BFG 3000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 3000</a>
@@ -133,7 +136,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="catalog-items-element">
                 <div class="catalog-item">
                   <img src="img/bosh_6000.jpg" alt="BOSCH BFG 6000" width="218" height="170">
                   <a href="#" class="popular catalog-item-go-to-card">Перфоратор BOSCH BFG 6000</a>
@@ -145,7 +148,7 @@
                   </div>
                 </div>
               </li>
-              <li class="last-in-string">
+              <li class="catalog-items-element">
                 <div class="catalog-item new">
                   <img src="img/bosh_3000.jpg" alt="BOSCH BFG 2000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 2000</a>
@@ -157,7 +160,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="catalog-items-element">
                 <div class="catalog-item">
                   <img src="img/bosh_3000.jpg" alt="BOSCH BFG 3000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 3000</a>
@@ -169,7 +172,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="catalog-items-element">
                 <div class="catalog-item new">
                   <img src="img/bosh_6000.jpg" alt="BOSCH BFG 6000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 6000</a>
@@ -181,7 +184,7 @@
                   </div>
                 </div>
               </li>
-              <li class="last-in-string">
+              <li class="catalog-items-element">
                 <div class="catalog-item">
                   <img src="img/bosh_3000.jpg" alt="BOSCH BFG 2000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 2000</a>
@@ -193,7 +196,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="catalog-items-element">
                 <div class="catalog-item new">
                   <img src="img/bosh_3000.jpg" alt="BOSCH BFG 3000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 3000</a>
@@ -205,7 +208,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="catalog-items-element">
                 <div class="catalog-item">
                   <img src="img/bosh_6000.jpg" alt="BOSCH BFG 6000" width="218" height="170">
                   <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 6000</a>
@@ -217,7 +220,7 @@
                   </div>
                 </div>
               </li>
-              <li  class="last-in-string">
+              <li class="catalog-items-element">
                 <div class="catalog-item">
                   <img src="img/bosh_3000.jpg" alt="BOSCH BFG 2000" width="218" height="170">
                   <a href="#" class="popular catalog-item-go-to-card">Перфоратор BOSCH BFG 2000</a>
@@ -355,5 +358,6 @@
         </div>
       </div>
     </section>
+    <script src="js/modalShow.js"></script>
   </body>
 </html>

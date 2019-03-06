@@ -108,7 +108,7 @@
           <a href="#" class="red-button">Все популярные товары</a>
         </div>
         <ul class="popular catalog-items">
-          <li>
+          <li class="catalog-items-element">
             <div class="catalog-item">
               <img src="img/bosh_9000.jpg" alt="BOSCH BFG 9000" width="218" height="170">
               <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 9000</a>
@@ -120,7 +120,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="catalog-items-element">
             <div class="catalog-item">
               <img src="img/bosh_3000.jpg" alt="BOSCH BFG 3000" width="218" height="170">
               <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 3000</a>
@@ -132,7 +132,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="catalog-items-element">
             <div class="catalog-item">
               <img src="img/bosh_6000.jpg" alt="BOSCH BFG 6000" width="218" height="170">
               <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 6000</a>
@@ -144,7 +144,7 @@
               </div>
             </div>
           </li>
-          <li class="last-in-string">
+          <li class="catalog-items-element">
             <div class="catalog-item new">
               <img src="img/bosh_3000.jpg" alt="BOSCH BFG 2000" width="218" height="170">
               <a href="#" class="catalog-item-go-to-card">Перфоратор BOSCH BFG 2000</a>
@@ -377,40 +377,8 @@
     <section class="big-map modal">
       <h2 class="visually-hidden">Увеличенная карта</h2>
       <button type="button" name="close-button" class="modal-close">Закрыть окно</button>
-      <img src="img/big_map.jpg" width="940" height="447" alt="Увеличенная карта с указанием нашего расположения">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae1fc55a69a6bf9164e0a6252b60d50a2b63b5e2f9a673c8ef6c5e9afe804ae6b&amp;source=constructor" width="940" height="447" frameborder="0"></iframe>
     </section>
-
-    <script>
-      function modalShow(buttonName, formName){
-        var links = document.querySelectorAll(buttonName);
-        var popup = document.querySelector(formName);
-        var close = popup.querySelector(".modal-close");
-
-        for (var i = 0; i < links.length; i++)  {
-          links[i].addEventListener("click", function (evt) {
-            evt.preventDefault();
-            popup.classList.add("modal-show");
-          });
-        }
-
-        close.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          popup.classList.remove("modal-show");
-        });
-      };
-
-      if (localStorage.getItem("bookmarks")==null){localStorage.setItem("bookmarks", "0")};
-      localStorage["bookmarks"]=parseInt(localStorage["bookmarks"]) + 1;
-      var el = document.querySelector(".bookmarks-value");
-      el.textContent = localStorage["bookmarks"];
-
-
-      modalShow(".send-question-form-show", ".send-question-form");
-      modalShow(".big-map-show", ".big-map");
-      modalShow(".login-form-show", ".login-form");
-      modalShow(".item-added-modal-show", ".item-added");
-
-    </script>
-
+    <script src="js/modalShow.js"></script>
   </body>
 </html>

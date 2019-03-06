@@ -993,14 +993,50 @@ header .logo{
   line-height: 18px;
 }
 
-.catalog-filters-range-control{
+.catalog-filters-slider{
   position: relative;
-  border-radius: 2px;
-  background-color: #f7f3ec;
-
   width: 220px;
   height: 80px;
   margin-bottom: 7px;
+  padding: 39px 21px 0px 30px;
+
+  border-radius: 2px;
+  background-color: #f7f3ec;
+
+}
+
+.catalog-filters-slider-line{
+  height: 2px;
+  /* margin-top: 39px; */
+  background: #d7dcde;
+}
+
+.catalog-filters-slider-line-fill{
+  position: relative;
+  width: 83%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.catalog-filters-slider-line-fill::before,
+.catalog-filters-slider-line-fill::after{
+  content: "";
+  position: absolute;
+  top: -9px;
+  width: 21px;
+  height: 21px;
+  border: 8px solid #ffff;
+  background: #ababab;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.catalog-filters-slider-line-fill::before{
+  left: -10px;
+}
+
+.catalog-filters-slider-line-fill::after{
+  right: -10px;
 }
 
 .minrange,
@@ -1019,7 +1055,7 @@ header .logo{
   right: 20px;
 }
 
-.catalog-filters-output-fields{
+.catalog-filters-input-fields{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1029,8 +1065,9 @@ header .logo{
   line-height: 18px;
 }
 
-.catalog-filters output{
-  border-radius: 2px;
+.catalog-filters-input-fields input{
+  border-radius: 4px;
+  border: none;
   background-color: #f7f3ec;
   width: 95px;
   height: 38px;
@@ -1304,10 +1341,18 @@ header .logo{
   margin-bottom: 1px;
 }
 
-.catalog-items li{
+.catalog-items-element{
   min-height: 318px;
   margin-right: 20px;
   margin-bottom: 19px;
+}
+
+.index-main .catalog-items-element:nth-child(4n){
+  margin-right: 0;
+}
+
+.catalog-list .catalog-items-element:nth-child(3n){
+  margin-right: 0;
 }
 
 .catalog-list{
@@ -1325,10 +1370,6 @@ header .logo{
   border: 1px solid #eaeaea;
 
   font: inherit;
-}
-
-.catalog-items .last-in-string{
-  margin-right: 0;
 }
 
 .catalog-item img{
@@ -2247,7 +2288,7 @@ footer .logo{
 
 .modal.big-map{
   width: 940px;
-  height: 446px;
+  height: 447px;
   left: 50%;
   bottom: 20%;
   margin-left: -470px;

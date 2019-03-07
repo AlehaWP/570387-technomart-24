@@ -2315,3 +2315,7 @@ footer .logo{
   bottom: 20%;
   margin-left: -470px;
 }
+
+.big-map iframe{
+  border: 0;
+}

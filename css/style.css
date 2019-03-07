@@ -256,7 +256,7 @@ header .logo{
   padding-left: 50px;
 }
 
-.hello-search-buy-user-choiсe.actived{
+.hello-search-buy-user-choiсe.not-null{
   color: #ffffff;
   background-color: #ee3643;
 }

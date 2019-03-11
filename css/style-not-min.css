@@ -1025,8 +1025,8 @@ header .logo{
   top: -9px;
   width: 21px;
   height: 21px;
-  border: 8px solid #ffff;
-  background: #ababab;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -2262,17 +2262,23 @@ footer .logo{
 
 .item-added .modal-footer-buttons{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
 .item-added .go-to-basket{
+  /* width: 220px; */
   flex-basis: 220px;
+
   margin-top: 37px;
   margin-bottom: 37px;
 }
 
 .item-added .go-to-main-paige{
+  /* width: 220px;
+  flex-basis: auto; */
   flex-basis: 220px;
   margin-top: 37px;
   margin-bottom: 37px;

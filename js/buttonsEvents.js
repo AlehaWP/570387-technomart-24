@@ -1,1 +1,60 @@
-function modalShow(e,o){for(var t=document.querySelectorAll(e),a=document.querySelector(o),l=a.querySelector(".modal-close"),n=0;n<t.length;n++)t[n].addEventListener("click",function(e){e.preventDefault(),a.classList.add("modal-show")});l.addEventListener("click",function(e){e.preventDefault(),a.classList.remove("modal-show")})}function setLinkCountersByButton(o,t,a,e){function l(){var e=document.querySelector(t);e.textContent=a+localStorage[o],e.classList.add("not-null")}null==localStorage.getItem(o)&&localStorage.setItem(o,"0"),0<localStorage[o]&&l();for(var n=document.querySelectorAll(e),r=0;r<n.length;r++)n[r].addEventListener("click",function(e){e.preventDefault(),localStorage[o]=parseInt(localStorage[o])+1,l()})}window.location.pathname.indexOf("index.html")+1&&(modalShow(".send-question-form-show",".send-question-form"),modalShow(".big-map-show",".big-map")),modalShow(".login-form-show",".login-form"),modalShow(".item-added-modal-show",".item-added"),setLinkCountersByButton("bookmarks",".bookmarks-value","Закладки: ",".catalog-item-bookmarks"),setLinkCountersByButton("basket",".basket-value","Корзина: ",".item-added-modal-show");
+function modalShow(buttonName, formName){
+  var links = document.querySelectorAll(buttonName);
+  var popup = document.querySelector(formName);
+  var close = popup.querySelector(".modal-close");
+
+  for (var i = 0; i < links.length; i++)  {
+    links[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+    });
+  }
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+  });
+};
+
+if(window.location.pathname.indexOf('index.html') + 1){
+  modalShow(".send-question-form-show", ".send-question-form");
+  modalShow(".big-map-show", ".big-map");
+}
+
+modalShow(".login-form-show", ".login-form");
+modalShow(".item-added-modal-show", ".item-added");
+
+var slides = document.querySelectorAll('.offers-slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide() {
+    slides[currentSlide].classList.add("visually-hidden");
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].classList.remove("visually-hidden");
+}
+
+function setLinkCountersByButton(locStorName, elemClass, elemDescriptText, buttonClass){
+  function setElemTextValue(){
+    var el = document.querySelector(elemClass);
+    el.textContent = elemDescriptText + localStorage[locStorName];
+    el.classList.add("not-null");
+  };
+
+  if (localStorage.getItem(locStorName)==null){localStorage.setItem(locStorName, "0")};
+  if(localStorage[locStorName]>0) {
+    setElemTextValue();
+  };
+
+  var links = document.querySelectorAll(buttonClass);
+  for (var i = 0; i < links.length; i++)  {
+    links[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      localStorage[locStorName]=parseInt(localStorage[locStorName]) + 1;
+      setElemTextValue();
+    });
+  }
+}
+
+setLinkCountersByButton("bookmarks", ".bookmarks-value", "Закладки: ", ".catalog-item-bookmarks");
+setLinkCountersByButton("basket", ".basket-value", "Корзина: ", ".item-added-modal-show");

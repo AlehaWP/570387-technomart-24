@@ -1121,6 +1121,7 @@ header .logo{
   justify-content: space-between;
   align-content: center;
   align-items: center;
+
   font-size: 17px;
   line-height: 18px;
 }
@@ -2034,6 +2035,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   padding-bottom: 49px;
 }
 

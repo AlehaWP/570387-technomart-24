@@ -125,6 +125,7 @@ a{
 
 .hello-search-buy{
   width: 100%;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -313,6 +314,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   padding: 0;
   padding-left: 53px;
   margin-bottom: 39px;
@@ -341,7 +343,9 @@ header .logo{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
   padding-top: 45px;
+
   font-size: 14px;
   line-height: 24px;
   color:#32425c;
@@ -381,6 +385,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
   /* Сделано через left для единообразия header в личном кабинете/разлогинен */
@@ -448,11 +453,14 @@ header .logo{
 
 .user-cabinet{
   position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+
   margin-bottom: 10px;
+
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -558,12 +566,13 @@ header .logo{
 }
 
 .main-nav ul{
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
+  padding: 0;
   padding-left: 21px;
   padding-bottom: 5px;
   list-style:none;
@@ -597,6 +606,7 @@ header .logo{
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: stretch;
+
   margin-bottom: 53px;
 
   background-color: #ffffff;
@@ -609,15 +619,14 @@ header .logo{
 }
 
 .our-offers-what-we-sell{
-  margin: 0;
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   width: 100%;
-  margin:0;
+  margin: 0;
   margin-bottom: 20px;
   padding: 0;
 
@@ -630,6 +639,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
+
   margin: 0;
   padding: 0;
   list-style: none;
@@ -763,15 +773,16 @@ header .logo{
 
 .our-offers-slider{
   position: relative;
-  width: 620px;
-  height: 266px;
-  margin-right: 20px;
   flex-grow: 2;
 
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  width: 620px;
+  height: 266px;
+
+  margin-right: 20px;
 }
 
 .our-offers-slider-perforators,
@@ -830,6 +841,7 @@ header .logo{
 
 .our-offers-slider-arrows{
   position: absolute;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -976,14 +988,14 @@ header .logo{
   flex-basis: 220px;
   align-self: flex-start;
 
-  margin-right: 20px;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  margin-right: 20px;
 }
 
 .catalog-filters h2{
@@ -1240,6 +1252,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   padding: 11px 0 9px 18px;
   margin: 0;
   margin-bottom: 19px;
@@ -1347,6 +1360,7 @@ header .logo{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   padding-top: 25px;
   padding-bottom: 26px;
   padding-left: 28px;
@@ -1386,6 +1400,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin:0;
   margin-bottom: 1px;
   padding:0;
@@ -1638,6 +1653,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin:0;
   padding: 0;
 
@@ -1697,7 +1713,6 @@ header .logo{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
 }
 
 .about-product{
@@ -1714,6 +1729,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
+
   padding-bottom: 69px;
 }
 
@@ -1758,7 +1774,6 @@ header .logo{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
 .services-list-buttons{
@@ -1768,8 +1783,8 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-
   flex-basis: 240px;
+
   margin: 0;
   margin-right: 80px;
   /* Распорка для картинки */
@@ -1885,6 +1900,7 @@ header .logo{
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
+
   margin-bottom: 86px;
 }
 
@@ -1907,6 +1923,7 @@ header .logo{
   flex-direction: column;
   width: 519px;
   flex-shrink: 0;
+
   margin-right: 121px;
 }
 
@@ -2139,10 +2156,12 @@ footer .logo{
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin: 0;
   margin-top: -2px;
   margin-right: 116px;
   padding: 0;
+
   list-style: none;
 }
 

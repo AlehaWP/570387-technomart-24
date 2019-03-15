@@ -125,6 +125,10 @@ a{
 
 .hello-search-buy{
   width: 100%;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 
   font:inherit;
@@ -135,6 +139,9 @@ a{
 }
 
 .hello-search-buy .center-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
 }
@@ -302,8 +309,12 @@ header .logo{
 }
 
 .center-container.headline{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   padding: 0;
   padding-left: 53px;
   margin-bottom: 39px;
@@ -326,10 +337,15 @@ header .logo{
 
 .fast-contacts{
   /* flex-basis : 270px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
   padding-top: 45px;
+
   font-size: 14px;
   line-height: 24px;
   color:#32425c;
@@ -364,8 +380,12 @@ header .logo{
 }
 
 .authorization{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
   /* Сделано через left для единообразия header в личном кабинете/разлогинен */
@@ -433,8 +453,14 @@ header .logo{
 
 .user-cabinet{
   position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+
   margin-bottom: 10px;
+
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -540,9 +566,13 @@ header .logo{
 }
 
 .main-nav ul{
-  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
+  padding: 0;
   padding-left: 21px;
   padding-bottom: 5px;
   list-style:none;
@@ -569,10 +599,14 @@ header .logo{
 }
 
 .our-offers{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: stretch;
+
   margin-bottom: 53px;
 
   background-color: #ffffff;
@@ -585,12 +619,14 @@ header .logo{
 }
 
 .our-offers-what-we-sell{
-  margin: 0;
-  padding: 0;
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-wrap: wrap;
+
   width: 100%;
-  margin:0;
+  margin: 0;
   margin-bottom: 20px;
   padding: 0;
 
@@ -598,8 +634,12 @@ header .logo{
 }
 
 .our-offers-privileges{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
+
   margin: 0;
   padding: 0;
   list-style: none;
@@ -733,12 +773,16 @@ header .logo{
 
 .our-offers-slider{
   position: relative;
-  width: 620px;
-  height: 266px;
-  margin-right: 20px;
   flex-grow: 2;
 
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 620px;
+  height: 266px;
+
+  margin-right: 20px;
 }
 
 .our-offers-slider-perforators,
@@ -797,6 +841,10 @@ header .logo{
 
 .our-offers-slider-arrows{
   position: absolute;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   left: 4%;
@@ -853,7 +901,10 @@ header .logo{
 .our-offers-privileges{
   flex-grow: 1;
 
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -870,6 +921,9 @@ header .logo{
 
 /*Стили страницы Каталог начало*/
 .bread-crumbs{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-start;
 }
@@ -934,11 +988,14 @@ header .logo{
   flex-basis: 220px;
   align-self: flex-start;
 
-  margin-right: 20px;
-
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  margin-right: 20px;
 }
 
 .catalog-filters h2{
@@ -1056,11 +1113,15 @@ header .logo{
 }
 
 .catalog-filters-input-fields{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
   align-items: center;
+
   font-size: 17px;
   line-height: 18px;
 }
@@ -1079,6 +1140,9 @@ header .logo{
 .catalog-filters-by-power ul{
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column nowrap;
   list-style: none;
@@ -1176,13 +1240,20 @@ header .logo{
   flex-basis: 700px;
   align-self: flex-start;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
 }
 
 .sorting-catalog{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   padding: 11px 0 9px 18px;
   margin: 0;
   margin-bottom: 19px;
@@ -1284,9 +1355,13 @@ header .logo{
 /*Стили страницы Каталог окончание*/
 .popular-goods-header,
 .popular-fabricator-header{
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   padding-top: 25px;
   padding-bottom: 26px;
   padding-left: 28px;
@@ -1321,8 +1396,12 @@ header .logo{
 }
 
 .catalog-items{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin:0;
   margin-bottom: 1px;
   padding:0;
@@ -1362,6 +1441,9 @@ header .logo{
 .catalog-item{
   position: relative;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   width:220px;
@@ -1519,6 +1601,9 @@ header .logo{
 .catalog-buttons-page{
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-start;
   width: 294px;
@@ -1564,8 +1649,12 @@ header .logo{
 }
 
 .fabricators-list{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin:0;
   padding: 0;
 
@@ -1584,6 +1673,9 @@ header .logo{
 }
 
 .fabricators-card{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1616,10 +1708,12 @@ header .logo{
 }
 
 .services .center-container{
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-
 }
 
 .about-product{
@@ -1631,8 +1725,12 @@ header .logo{
 }
 
 .about-product .center-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
+
   padding-bottom: 69px;
 }
 
@@ -1671,18 +1769,23 @@ header .logo{
 
 .services-list{
   width: 100%;
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
 .services-list-buttons{
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
-
   flex-basis: 240px;
+
   margin: 0;
   margin-right: 80px;
   /* Распорка для картинки */
@@ -1793,8 +1896,12 @@ header .logo{
 }
 
 .company-contacts{
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   justify-content: space-between;
+
   margin-bottom: 86px;
 }
 
@@ -1810,14 +1917,21 @@ header .logo{
 }
 
 .about-us{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   width: 519px;
   flex-shrink: 0;
+
   margin-right: 121px;
 }
 
 .contacts{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-basis: 300px;
   flex-shrink: 0;
@@ -1889,8 +2003,11 @@ header .logo{
 
 .contacts-map{
   display: block;
+  width: 300px;
+  height: 158px;
   margin-bottom: 40px;
   cursor: pointer;
+  background-color: #f9f5f0;
 }
 
 .contacts .red-button{
@@ -1913,14 +2030,21 @@ header .logo{
 }
 
 .information .center-container{
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-wrap: wrap;
+
   padding-bottom: 49px;
 }
 
 .information .left-box,
 .information .footer-nav{
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -1950,7 +2074,10 @@ footer .logo{
 }
 
 .footer-nav ul{
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-wrap: wrap;
 
   justify-content: space-between;
@@ -2004,7 +2131,10 @@ footer .logo{
 }
 
 .different-links .center-container{
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
   flex-wrap: wrap;
   padding-top: 37px;
@@ -2023,12 +2153,17 @@ footer .logo{
 }
 
 .social-links{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+
   margin: 0;
   margin-top: -2px;
   margin-right: 116px;
   padding: 0;
+
   list-style: none;
 }
 
@@ -2190,6 +2325,9 @@ footer .logo{
 }
 
 .modal-dialog .content-block{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -2261,25 +2399,27 @@ footer .logo{
 }
 
 .item-added .modal-footer-buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   flex-flow: row wrap;
   justify-content: space-between;
+  /* padding: 37px 0; */
 }
 
 .item-added .go-to-basket{
-  /* width: 220px; */
-  flex-basis: 220px;
+  width: 220px;
+  flex-basis: auto;
 
   margin-top: 37px;
   margin-bottom: 37px;
 }
 
+
 .item-added .go-to-main-paige{
-  /* width: 220px;
-  flex-basis: auto; */
-  flex-basis: 220px;
+  width: 220px;
+  flex-basis: auto;
   margin-top: 37px;
   margin-bottom: 37px;
   border: none;
